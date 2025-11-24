@@ -11,11 +11,10 @@ namespace CapaPresentacion
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-<<<<<<< HEAD
-            Application.Run(new frmMenuPrincipal());
-=======
+            
+            // He configurado que inicie con el Login.
+            // Si en algún momento quieres probar directo el menú, cambia "new Login()" por "new frmMenuPrincipal()".
             Application.Run(new Login());
->>>>>>> Login listo
         }
     }
 }
