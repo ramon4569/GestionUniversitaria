@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
@@ -9,9 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-<<<<<<< HEAD
     <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj" />
-=======
+  </ItemGroup>
+
+  <ItemGroup>
     <COMReference Include="WMPLib">
       <WrapperTool>tlbimp</WrapperTool>
       <VersionMinor>0</VersionMinor>
@@ -29,11 +30,7 @@
       <Lcid>0</Lcid>
       <Isolated>false</Isolated>
     </COMReference>
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.7" />
->>>>>>> Login listo
   </ItemGroup>
 
   <ItemGroup>
