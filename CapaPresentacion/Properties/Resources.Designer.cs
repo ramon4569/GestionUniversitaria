@@ -63,9 +63,15 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap aaa {
             get {
                 object obj = ResourceManager.GetObject("aaa", resourceCulture);
+=======
+        internal static System.Drawing.Bitmap Carga {
+            get {
+                object obj = ResourceManager.GetObject("Carga", resourceCulture);
+>>>>>>> Login listo
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +79,15 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap image__10_ {
             get {
                 object obj = ResourceManager.GetObject("image (10)", resourceCulture);
+=======
+        internal static System.Drawing.Bitmap icone_x_grise {
+            get {
+                object obj = ResourceManager.GetObject("icone-x-grise", resourceCulture);
+>>>>>>> Login listo
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +95,15 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap image__10__removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("image__10_-removebg-preview", resourceCulture);
+=======
+        internal static System.Drawing.Bitmap LogoCandado {
+            get {
+                object obj = ResourceManager.GetObject("LogoCandado", resourceCulture);
+>>>>>>> Login listo
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +111,15 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap image__8_ {
             get {
                 object obj = ResourceManager.GetObject("image (8)", resourceCulture);
+=======
+        internal static System.Drawing.Bitmap Minimizar {
+            get {
+                object obj = ResourceManager.GetObject("Minimizar", resourceCulture);
+>>>>>>> Login listo
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +127,15 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap image__8_1 {
             get {
                 object obj = ResourceManager.GetObject("image (8)1", resourceCulture);
+=======
+        internal static System.Drawing.Bitmap OjitoCerrado {
+            get {
+                object obj = ResourceManager.GetObject("OjitoCerrado", resourceCulture);
+>>>>>>> Login listo
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +143,25 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap image__9_ {
             get {
                 object obj = ResourceManager.GetObject("image (9)", resourceCulture);
+=======
+        internal static System.Drawing.Bitmap ojoAbierto {
+            get {
+                object obj = ResourceManager.GetObject("ojoAbierto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Usuario {
+            get {
+                object obj = ResourceManager.GetObject("Usuario", resourceCulture);
+>>>>>>> Login listo
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
