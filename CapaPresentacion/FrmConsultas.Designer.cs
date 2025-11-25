@@ -338,16 +338,18 @@
             guna2Panel1.BorderRadius = 25;
             guna2Panel1.Controls.Add(gunaDgvConsultas);
             guna2Panel1.CustomizableEdges = customizableEdges17;
-            guna2Panel1.Location = new Point(44, 137);
+            guna2Panel1.Location = new Point(15, 137);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            guna2Panel1.Size = new Size(647, 401);
+            guna2Panel1.Size = new Size(710, 401);
             guna2Panel1.TabIndex = 8;
             // 
             // gunaDgvConsultas
             // 
+            gunaDgvConsultas.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.BackColor = Color.White;
             gunaDgvConsultas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            gunaDgvConsultas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             gunaDgvConsultas.BackgroundColor = Color.FromArgb(212, 210, 195);
             gunaDgvConsultas.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -374,8 +376,8 @@
             gunaDgvConsultas.Name = "gunaDgvConsultas";
             gunaDgvConsultas.ReadOnly = true;
             gunaDgvConsultas.RowHeadersVisible = false;
-            gunaDgvConsultas.RowTemplate.Height = 35;
-            gunaDgvConsultas.Size = new Size(647, 401);
+            gunaDgvConsultas.RowTemplate.Height = 40;
+            gunaDgvConsultas.Size = new Size(710, 401);
             gunaDgvConsultas.TabIndex = 7;
             gunaDgvConsultas.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             gunaDgvConsultas.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -395,7 +397,7 @@
             gunaDgvConsultas.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             gunaDgvConsultas.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
             gunaDgvConsultas.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            gunaDgvConsultas.ThemeStyle.RowsStyle.Height = 35;
+            gunaDgvConsultas.ThemeStyle.RowsStyle.Height = 40;
             gunaDgvConsultas.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             gunaDgvConsultas.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
@@ -415,7 +417,7 @@
             TxtBuscar.ForeColor = Color.Black;
             TxtBuscar.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             TxtBuscar.IconLeft = Properties.Resources.image__8_;
-            TxtBuscar.Location = new Point(44, 59);
+            TxtBuscar.Location = new Point(18, 70);
             TxtBuscar.Name = "TxtBuscar";
             TxtBuscar.PlaceholderText = "Buscar por nombre o matrícula";
             TxtBuscar.SelectedText = "";
