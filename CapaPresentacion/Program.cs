@@ -8,13 +8,23 @@ namespace CapaPresentacion
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            
-            // He configurado que inicie con el Login.
-            // Si en algún momento quieres probar directo el menú, cambia "new Login()" por "new frmMenuPrincipal()".
-            Application.Run(new Login());
+
+            // 1. Creamos el Login (pero no iniciamos la App con él todavía)
+            Login login = new Login(); // Asegúrate de que tu clase se llame 'Login' o 'frmLogin'
+
+            // 2. Lo mostramos como un Diálogo (Modal)
+            // Esto pausa el código aquí hasta que el usuario entre o cierre la ventana.
+            if (login.ShowDialog() == DialogResult.OK)
+            {
+                // 3. Si el Login dijo "OK" (Usuario válido), entonces AHORA SÍ arrancamos el Menú
+                Application.Run(new frmMenuPrincipal());
+            }
+            else
+            {
+                // 4. Si cerró el Login sin entrar, matamos el proceso
+                Application.Exit();
+            }
         }
     }
 }

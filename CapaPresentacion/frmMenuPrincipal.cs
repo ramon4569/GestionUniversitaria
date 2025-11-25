@@ -109,10 +109,9 @@ namespace CapaPresentacion
             MessageBox.Show("Aquí se abrirá Calificaciones");
         }
 
-        private void btnConsultas_Click(object sender, EventArgs e)
+        private void btnConsultas_Click_1(object sender, EventArgs e)
         {
-            // AbrirFormularioHijo(new frmConsultas());
-            MessageBox.Show("Aquí se abrirán las Consultas LINQ");
+            AbrirFormularioHijo(new FrmConsultas());
         }
 
         private void btnSalir_Click_1(object sender, EventArgs e)
@@ -165,6 +164,6 @@ namespace CapaPresentacion
             Application.Exit();
         }
 
-        
+       
     }
 }

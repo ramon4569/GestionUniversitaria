@@ -1,4 +1,9 @@
-﻿using System;
+﻿using CapaDatos.Conexion;
+using CapaNegocio.Base;
+using CapaNegocio.Servicios;
+using CapaNegocio.ServiciosCD;
+using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,15 +11,30 @@ using System.Threading.Tasks;
 
 namespace CapaNegocio.Acceso
 {
-    
-    public class AutenticacionService
+    public class UsuarioService
     {
-        // Este método debería llamar a la DAL para verificar las credenciales en la DB o lista.
-        public bool ValidarCredenciales(string usuario, string contrasena)
+        // Instancia de la capa de datos
+        private UsuarioDAL _usuarioDAL = new UsuarioDAL();
+
+        public Usuario ValidarAcceso(string usuario, string clave)
         {
-            // **Lógica de Autenticación temporal o de prueba:**
-            // Reemplaza esto con una llamada a tu DAL (Repositorio)
-            return usuario == "admin" && contrasena == "uce123";
+            // 1. Validaciones básicas antes de ir a la BD
+            if (string.IsNullOrWhiteSpace(usuario) || string.IsNullOrWhiteSpace(clave))
+            {
+                throw new Exception("Debe ingresar usuario y contraseña.");
+            }
+
+            // 2. Llamamos al DAL
+            Usuario usuarioEncontrado = _usuarioDAL.Login(usuario, clave);
+
+            // 3. Verificamos si encontró algo
+            if (usuarioEncontrado == null)
+            {
+                throw new Exception("Usuario o contraseña incorrectos.");
+            }
+
+            // 4. Devolvemos el usuario completo al formulario
+            return usuarioEncontrado;
         }
     }
 }
