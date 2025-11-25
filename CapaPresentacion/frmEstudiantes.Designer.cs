@@ -28,9 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
             panelRegistro = new Panel();
+            panelListado = new Guna.UI2.WinForms.Guna2Panel();
+            btnRegresar = new Guna.UI2.WinForms.Guna2PictureBox();
             groupBox1 = new GroupBox();
+            txtEmail = new MaskedTextBox();
+            txtTelefono = new MaskedTextBox();
+            cmbCarrera = new ComboBox();
+            txtApellido = new TextBox();
+            txtNombre = new TextBox();
             txtMatricula = new TextBox();
             label7 = new Label();
             label6 = new Label();
@@ -38,13 +50,12 @@
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
-            panelListado = new Panel();
-            txtNombre = new TextBox();
-            txtApellido = new TextBox();
-            cmbCarrera = new ComboBox();
-            txtTelefono = new MaskedTextBox();
-            txtEmail = new MaskedTextBox();
+            guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(components);
+            guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(components);
+            guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(components);
             panelRegistro.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)btnRegresar).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -53,7 +64,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(28, 28, 28);
-            label1.Location = new Point(12, 33);
+            label1.Location = new Point(33, 63);
             label1.Name = "label1";
             label1.Size = new Size(280, 30);
             label1.TabIndex = 0;
@@ -61,6 +72,8 @@
             // 
             // panelRegistro
             // 
+            panelRegistro.Controls.Add(panelListado);
+            panelRegistro.Controls.Add(btnRegresar);
             panelRegistro.Controls.Add(groupBox1);
             panelRegistro.Controls.Add(label1);
             panelRegistro.Dock = DockStyle.Fill;
@@ -68,6 +81,32 @@
             panelRegistro.Name = "panelRegistro";
             panelRegistro.Size = new Size(934, 561);
             panelRegistro.TabIndex = 2;
+            // 
+            // panelListado
+            // 
+            panelListado.CustomizableEdges = customizableEdges1;
+            panelListado.Dock = DockStyle.Right;
+            panelListado.Location = new Point(330, 0);
+            panelListado.Name = "panelListado";
+            panelListado.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            panelListado.Size = new Size(604, 561);
+            panelListado.TabIndex = 3;
+            // 
+            // btnRegresar
+            // 
+            btnRegresar.BackColor = Color.FromArgb(212, 210, 195);
+            btnRegresar.CustomizableEdges = customizableEdges3;
+            btnRegresar.FillColor = Color.Black;
+            btnRegresar.Image = Properties.Resources.regresar;
+            btnRegresar.ImageRotate = 0F;
+            btnRegresar.Location = new Point(12, 12);
+            btnRegresar.Name = "btnRegresar";
+            btnRegresar.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnRegresar.Size = new Size(30, 28);
+            btnRegresar.SizeMode = PictureBoxSizeMode.Zoom;
+            btnRegresar.TabIndex = 2;
+            btnRegresar.TabStop = false;
+            btnRegresar.Click += btnRegresar_Click;
             // 
             // groupBox1
             // 
@@ -83,12 +122,48 @@
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
-            groupBox1.Location = new Point(43, 187);
+            groupBox1.Location = new Point(62, 114);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(211, 435);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "groupBox1";
+            // 
+            // txtEmail
+            // 
+            txtEmail.Location = new Point(33, 332);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(100, 23);
+            txtEmail.TabIndex = 11;
+            // 
+            // txtTelefono
+            // 
+            txtTelefono.Location = new Point(32, 288);
+            txtTelefono.Name = "txtTelefono";
+            txtTelefono.Size = new Size(100, 23);
+            txtTelefono.TabIndex = 10;
+            // 
+            // cmbCarrera
+            // 
+            cmbCarrera.FormattingEnabled = true;
+            cmbCarrera.Location = new Point(32, 236);
+            cmbCarrera.Name = "cmbCarrera";
+            cmbCarrera.Size = new Size(121, 23);
+            cmbCarrera.TabIndex = 9;
+            // 
+            // txtApellido
+            // 
+            txtApellido.Location = new Point(32, 174);
+            txtApellido.Name = "txtApellido";
+            txtApellido.Size = new Size(100, 23);
+            txtApellido.TabIndex = 8;
+            // 
+            // txtNombre
+            // 
+            txtNombre.Location = new Point(32, 120);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(100, 23);
+            txtNombre.TabIndex = 7;
             // 
             // txtMatricula
             // 
@@ -152,49 +227,25 @@
             label2.TabIndex = 0;
             label2.Text = "Matricula";
             // 
-            // panelListado
+            // guna2Elipse1
             // 
-            panelListado.Dock = DockStyle.Right;
-            panelListado.Location = new Point(328, 0);
-            panelListado.Name = "panelListado";
-            panelListado.Size = new Size(606, 561);
-            panelListado.TabIndex = 3;
+            guna2Elipse1.BorderRadius = 8;
+            guna2Elipse1.TargetControl = panelListado;
             // 
-            // txtNombre
+            // guna2ShadowForm1
             // 
-            txtNombre.Location = new Point(32, 120);
-            txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(100, 23);
-            txtNombre.TabIndex = 7;
+            guna2ShadowForm1.BorderRadius = 20;
+            guna2ShadowForm1.TargetForm = this;
             // 
-            // txtApellido
+            // guna2AnimateWindow1
             // 
-            txtApellido.Location = new Point(32, 174);
-            txtApellido.Name = "txtApellido";
-            txtApellido.Size = new Size(100, 23);
-            txtApellido.TabIndex = 8;
+            guna2AnimateWindow1.TargetForm = this;
             // 
-            // cmbCarrera
+            // guna2DragControl1
             // 
-            cmbCarrera.FormattingEnabled = true;
-            cmbCarrera.Location = new Point(32, 236);
-            cmbCarrera.Name = "cmbCarrera";
-            cmbCarrera.Size = new Size(121, 23);
-            cmbCarrera.TabIndex = 9;
-            // 
-            // txtTelefono
-            // 
-            txtTelefono.Location = new Point(32, 288);
-            txtTelefono.Name = "txtTelefono";
-            txtTelefono.Size = new Size(100, 23);
-            txtTelefono.TabIndex = 10;
-            // 
-            // txtEmail
-            // 
-            txtEmail.Location = new Point(33, 332);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(100, 23);
-            txtEmail.TabIndex = 11;
+            guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            guna2DragControl1.TargetControl = groupBox1;
+            guna2DragControl1.UseTransparentDrag = true;
             // 
             // frmEstudiantes
             // 
@@ -202,12 +253,15 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(212, 210, 195);
             ClientSize = new Size(934, 561);
-            Controls.Add(panelListado);
             Controls.Add(panelRegistro);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "frmEstudiantes";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmEstudiantes";
+            Load += frmEstudiantes_Load;
             panelRegistro.ResumeLayout(false);
             panelRegistro.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)btnRegresar).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);
@@ -217,7 +271,6 @@
 
         private Label label1;
         private Panel panelRegistro;
-        private Panel panelListado;
         private GroupBox groupBox1;
         private TextBox txtMatricula;
         private Label label7;
@@ -231,5 +284,11 @@
         private ComboBox cmbCarrera;
         private TextBox txtApellido;
         private TextBox txtNombre;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
+        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private Guna.UI2.WinForms.Guna2PictureBox btnRegresar;
+        private Guna.UI2.WinForms.Guna2Panel panelListado;
     }
 }

@@ -58,11 +58,14 @@ namespace CapaPresentacion
         }
 
         // Evento del Botón Hamburguesa (Las 3 rayitas)
-        private void btnMenu_Click(object sender, EventArgs e)
+        private void btnMenu_Click_2(object sender, EventArgs e)
         {
             // Iniciamos el timer, la lógica de arriba decide si abrir o cerrar
             SidebarTimer.Start();
         }
+
+
+
 
         // --- LÓGICA PARA ABRIR FORMULARIOS HIJOS ---
         private void AbrirFormularioHijo(Form formularioHijo)
@@ -89,10 +92,9 @@ namespace CapaPresentacion
 
         // --- EVENTOS DE LOS BOTONES DE NAVEGACIÓN ---
 
-        private void btnEstudiantes_Click(object sender, EventArgs e)
+        private void btnEstudiantes_Click_1(object sender, EventArgs e)
         {
-            // AbrirFormularioHijo(new frmEstudiantes()); 
-            MessageBox.Show("Aquí se abrirá Gestión de Estudiantes");
+            AbrirFormularioHijo(new frmEstudiantes());
         }
 
         private void btnInscripciones_Click(object sender, EventArgs e)
@@ -113,9 +115,19 @@ namespace CapaPresentacion
             MessageBox.Show("Aquí se abrirán las Consultas LINQ");
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void btnSalir_Click_1(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult resultado = MessageBox.Show(
+            "¿Está seguro que desea salir del Sistema de Gestión Académica?",
+            "Confirmar Salida",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.Yes)
+            {
+                // Esta línea detiene todos los hilos y cierra la aplicación por completo.
+                Application.Exit();
+            }
         }
 
         private void pictureBox2_MouseEnter(object sender, EventArgs e)
@@ -147,5 +159,12 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        
     }
 }

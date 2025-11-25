@@ -29,40 +29,53 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panelMenuLateral = new Panel();
-            btnEstudiantes = new Button();
-            btnSalir = new Button();
-            btnCalificaciones = new Button();
-            btnConsultas = new Button();
+            btnMenu = new Guna.UI2.WinForms.Guna2PictureBox();
+            btnSalir = new Guna.UI2.WinForms.Guna2Button();
+            guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            btnEstudiantes = new Guna.UI2.WinForms.Guna2Button();
             panelLogo = new Panel();
-            btnMenu = new PictureBox();
             pictureBox1 = new PictureBox();
             panelContenedor = new Panel();
             panel1 = new Panel();
+            guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+            btnCerrar = new Guna.UI2.WinForms.Guna2ControlBox();
             SidebarTimer = new System.Windows.Forms.Timer(components);
-            pictureBox2 = new PictureBox();
-            pictureBox3 = new PictureBox();
-            pictureBox4 = new PictureBox();
+            guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(components);
+            guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(components);
+            guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(components);
             panelMenuLateral.SuspendLayout();
-            panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnMenu).BeginInit();
+            panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelContenedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panelMenuLateral
             // 
             panelMenuLateral.BackColor = Color.FromArgb(28, 28, 28);
-            panelMenuLateral.Controls.Add(pictureBox4);
-            panelMenuLateral.Controls.Add(pictureBox3);
-            panelMenuLateral.Controls.Add(pictureBox2);
-            panelMenuLateral.Controls.Add(btnEstudiantes);
+            panelMenuLateral.Controls.Add(btnMenu);
             panelMenuLateral.Controls.Add(btnSalir);
-            panelMenuLateral.Controls.Add(btnCalificaciones);
-            panelMenuLateral.Controls.Add(btnConsultas);
+            panelMenuLateral.Controls.Add(guna2Button3);
+            panelMenuLateral.Controls.Add(guna2Button2);
+            panelMenuLateral.Controls.Add(btnEstudiantes);
             panelMenuLateral.Controls.Add(panelLogo);
             panelMenuLateral.Dock = DockStyle.Left;
             panelMenuLateral.ForeColor = Color.White;
@@ -70,89 +83,110 @@
             panelMenuLateral.MaximumSize = new Size(250, 0);
             panelMenuLateral.MinimumSize = new Size(70, 0);
             panelMenuLateral.Name = "panelMenuLateral";
-            panelMenuLateral.Size = new Size(250, 561);
+            panelMenuLateral.Size = new Size(250, 678);
             panelMenuLateral.TabIndex = 0;
             // 
-            // btnEstudiantes
+            // btnMenu
             // 
-            btnEstudiantes.AutoSize = true;
-            btnEstudiantes.Cursor = Cursors.Hand;
-            btnEstudiantes.FlatAppearance.BorderSize = 0;
-            btnEstudiantes.FlatAppearance.MouseOverBackColor = Color.FromArgb(90, 139, 76);
-            btnEstudiantes.FlatStyle = FlatStyle.Flat;
-            btnEstudiantes.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnEstudiantes.Location = new Point(3, 94);
-            btnEstudiantes.Name = "btnEstudiantes";
-            btnEstudiantes.Size = new Size(250, 78);
-            btnEstudiantes.TabIndex = 8;
-            btnEstudiantes.Text = "Estudiantes";
-            btnEstudiantes.UseVisualStyleBackColor = true;
+            btnMenu.CustomizableEdges = customizableEdges1;
+            btnMenu.Image = Properties.Resources.image__8_1;
+            btnMenu.ImageRotate = 0F;
+            btnMenu.Location = new Point(9, 91);
+            btnMenu.Name = "btnMenu";
+            btnMenu.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnMenu.Size = new Size(50, 50);
+            btnMenu.SizeMode = PictureBoxSizeMode.Zoom;
+            btnMenu.TabIndex = 9;
+            btnMenu.TabStop = false;
+            btnMenu.Click += btnMenu_Click_2;
             // 
             // btnSalir
             // 
-            btnSalir.AutoSize = true;
-            btnSalir.Cursor = Cursors.Hand;
-            btnSalir.FlatAppearance.BorderSize = 0;
-            btnSalir.FlatAppearance.MouseOverBackColor = Color.FromArgb(90, 139, 76);
-            btnSalir.FlatStyle = FlatStyle.Flat;
+            btnSalir.CustomizableEdges = customizableEdges3;
+            btnSalir.DisabledState.BorderColor = Color.DarkGray;
+            btnSalir.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnSalir.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnSalir.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSalir.FillColor = Color.FromArgb(28, 28, 28);
             btnSalir.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSalir.Location = new Point(0, 334);
+            btnSalir.ForeColor = Color.White;
+            btnSalir.Location = new Point(0, 386);
             btnSalir.Name = "btnSalir";
+            btnSalir.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnSalir.Size = new Size(250, 78);
-            btnSalir.TabIndex = 4;
+            btnSalir.TabIndex = 8;
             btnSalir.Text = "Salir";
-            btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.Click += btnSalir_Click_1;
             // 
-            // btnCalificaciones
+            // guna2Button3
             // 
-            btnCalificaciones.AutoSize = true;
-            btnCalificaciones.Cursor = Cursors.Hand;
-            btnCalificaciones.FlatAppearance.BorderSize = 0;
-            btnCalificaciones.FlatAppearance.MouseOverBackColor = Color.FromArgb(90, 139, 76);
-            btnCalificaciones.FlatStyle = FlatStyle.Flat;
-            btnCalificaciones.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCalificaciones.Location = new Point(0, 256);
-            btnCalificaciones.Name = "btnCalificaciones";
-            btnCalificaciones.Size = new Size(250, 78);
-            btnCalificaciones.TabIndex = 3;
-            btnCalificaciones.Text = "Calificaciones";
-            btnCalificaciones.UseVisualStyleBackColor = true;
+            guna2Button3.CustomizableEdges = customizableEdges5;
+            guna2Button3.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button3.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button3.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button3.FillColor = Color.FromArgb(28, 28, 28);
+            guna2Button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button3.ForeColor = Color.White;
+            guna2Button3.Image = Properties.Resources.image__9_;
+            guna2Button3.ImageAlign = HorizontalAlignment.Left;
+            guna2Button3.ImageSize = new Size(50, 50);
+            guna2Button3.Location = new Point(-3, 302);
+            guna2Button3.Name = "guna2Button3";
+            guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2Button3.Size = new Size(250, 78);
+            guna2Button3.TabIndex = 7;
+            guna2Button3.Text = "     Calificaciones";
             // 
-            // btnConsultas
+            // guna2Button2
             // 
-            btnConsultas.AutoSize = true;
-            btnConsultas.Cursor = Cursors.Hand;
-            btnConsultas.FlatAppearance.BorderSize = 0;
-            btnConsultas.FlatAppearance.MouseOverBackColor = Color.FromArgb(90, 139, 76);
-            btnConsultas.FlatStyle = FlatStyle.Flat;
-            btnConsultas.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnConsultas.Location = new Point(0, 178);
-            btnConsultas.Name = "btnConsultas";
-            btnConsultas.Size = new Size(250, 78);
-            btnConsultas.TabIndex = 2;
-            btnConsultas.Text = "Consultas";
-            btnConsultas.UseVisualStyleBackColor = true;
+            guna2Button2.CustomizableEdges = customizableEdges7;
+            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button2.FillColor = Color.FromArgb(28, 28, 28);
+            guna2Button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button2.ForeColor = Color.White;
+            guna2Button2.Image = Properties.Resources.image__8_;
+            guna2Button2.ImageAlign = HorizontalAlignment.Left;
+            guna2Button2.ImageSize = new Size(50, 50);
+            guna2Button2.Location = new Point(3, 218);
+            guna2Button2.Name = "guna2Button2";
+            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2Button2.Size = new Size(250, 78);
+            guna2Button2.TabIndex = 6;
+            guna2Button2.Text = "Consultas";
+            // 
+            // btnEstudiantes
+            // 
+            btnEstudiantes.CustomizableEdges = customizableEdges9;
+            btnEstudiantes.DisabledState.BorderColor = Color.DarkGray;
+            btnEstudiantes.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnEstudiantes.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnEstudiantes.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnEstudiantes.FillColor = Color.FromArgb(28, 28, 28);
+            btnEstudiantes.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEstudiantes.ForeColor = Color.White;
+            btnEstudiantes.Image = Properties.Resources.image__10_;
+            btnEstudiantes.ImageAlign = HorizontalAlignment.Left;
+            btnEstudiantes.ImageSize = new Size(50, 50);
+            btnEstudiantes.Location = new Point(0, 147);
+            btnEstudiantes.Name = "btnEstudiantes";
+            btnEstudiantes.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnEstudiantes.Size = new Size(250, 78);
+            btnEstudiantes.TabIndex = 5;
+            btnEstudiantes.Text = "Estudiantes";
+            btnEstudiantes.Click += btnEstudiantes_Click_1;
             // 
             // panelLogo
             // 
-            panelLogo.Controls.Add(btnMenu);
             panelLogo.Controls.Add(pictureBox1);
             panelLogo.Dock = DockStyle.Top;
             panelLogo.Location = new Point(0, 0);
             panelLogo.Name = "panelLogo";
             panelLogo.Size = new Size(250, 100);
             panelLogo.TabIndex = 0;
-            // 
-            // btnMenu
-            // 
-            btnMenu.Image = Properties.Resources.image__8_1;
-            btnMenu.Location = new Point(12, 26);
-            btnMenu.Name = "btnMenu";
-            btnMenu.Size = new Size(46, 52);
-            btnMenu.SizeMode = PictureBoxSizeMode.Zoom;
-            btnMenu.TabIndex = 8;
-            btnMenu.TabStop = false;
-            btnMenu.Click += btnMenu_Click;
             // 
             // pictureBox1
             // 
@@ -170,72 +204,87 @@
             panelContenedor.Dock = DockStyle.Fill;
             panelContenedor.Location = new Point(250, 0);
             panelContenedor.Name = "panelContenedor";
-            panelContenedor.Size = new Size(834, 561);
+            panelContenedor.Size = new Size(1166, 678);
             panelContenedor.TabIndex = 1;
             panelContenedor.Paint += panelContenedor_Paint;
             // 
             // panel1
             // 
+            panel1.Controls.Add(guna2ControlBox2);
+            panel1.Controls.Add(btnCerrar);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(834, 100);
+            panel1.Size = new Size(1166, 100);
             panel1.TabIndex = 0;
+            // 
+            // guna2ControlBox2
+            // 
+            guna2ControlBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            guna2ControlBox2.CustomizableEdges = customizableEdges11;
+            guna2ControlBox2.FillColor = Color.FromArgb(212, 210, 195);
+            guna2ControlBox2.IconColor = Color.DimGray;
+            guna2ControlBox2.Location = new Point(1111, 12);
+            guna2ControlBox2.Name = "guna2ControlBox2";
+            guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2ControlBox2.Size = new Size(23, 17);
+            guna2ControlBox2.TabIndex = 10;
+            // 
+            // btnCerrar
+            // 
+            btnCerrar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnCerrar.CustomizableEdges = customizableEdges13;
+            btnCerrar.FillColor = Color.FromArgb(212, 210, 195);
+            btnCerrar.IconColor = Color.DimGray;
+            btnCerrar.Location = new Point(1140, 12);
+            btnCerrar.Name = "btnCerrar";
+            btnCerrar.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnCerrar.Size = new Size(23, 17);
+            btnCerrar.TabIndex = 9;
+            btnCerrar.Click += btnCerrar_Click;
             // 
             // SidebarTimer
             // 
             SidebarTimer.Interval = 15;
             SidebarTimer.Tick += SidebarTimer_Tick;
             // 
-            // pictureBox2
+            // guna2Elipse1
             // 
-            pictureBox2.Image = Properties.Resources.image__10_;
-            pictureBox2.Location = new Point(12, 106);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(46, 52);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 9;
-            pictureBox2.TabStop = false;
+            guna2Elipse1.BorderRadius = 8;
+            guna2Elipse1.TargetControl = this;
             // 
-            // pictureBox3
+            // guna2ShadowForm1
             // 
-            pictureBox3.Image = Properties.Resources.image__8_;
-            pictureBox3.Location = new Point(12, 187);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(46, 52);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 10;
-            pictureBox3.TabStop = false;
+            guna2ShadowForm1.TargetForm = this;
             // 
-            // pictureBox4
+            // guna2AnimateWindow1
             // 
-            pictureBox4.Image = Properties.Resources.image__9_;
-            pictureBox4.Location = new Point(12, 262);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(46, 52);
-            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox4.TabIndex = 11;
-            pictureBox4.TabStop = false;
+            guna2AnimateWindow1.TargetForm = this;
+            // 
+            // guna2DragControl1
+            // 
+            guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            guna2DragControl1.TargetControl = panelContenedor;
+            guna2DragControl1.UseTransparentDrag = true;
             // 
             // frmMenuPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1084, 561);
+            ClientSize = new Size(1416, 678);
             Controls.Add(panelContenedor);
             Controls.Add(panelMenuLateral);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "frmMenuPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmMenuPrincipal";
             panelMenuLateral.ResumeLayout(false);
-            panelMenuLateral.PerformLayout();
-            panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)btnMenu).EndInit();
+            panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panelContenedor.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -246,14 +295,17 @@
         private Panel panelLogo;
         private Panel panel1;
         private PictureBox pictureBox1;
-        private PictureBox btnMenu;
         private System.Windows.Forms.Timer SidebarTimer;
-        private Button btnSalir;
-        private Button btnConsultas;
-        private Button btnCalificaciones;
-        private Button btnEstudiantes;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox2;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
+        private Guna.UI2.WinForms.Guna2ControlBox btnCerrar;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
+        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private Guna.UI2.WinForms.Guna2Button btnSalir;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button btnEstudiantes;
+        private Guna.UI2.WinForms.Guna2PictureBox btnMenu;
     }
 }
