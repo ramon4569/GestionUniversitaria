@@ -152,11 +152,8 @@
             btnTop10.Font = new Font("Segoe UI", 9F);
             btnTop10.ForeColor = Color.White;
             btnTop10.HoverState.FillColor = Color.FromArgb(45, 45, 45);
-<<<<<<< HEAD
             btnTop10.Image = Properties.Resources.Maximizar;
-=======
-           // btnTop10.Image = Properties.Resources.estrella;
->>>>>>> GESTION ESTUDIANTE
+            btnTop10.Image = Properties.Resources.estrella;
             btnTop10.ImageAlign = HorizontalAlignment.Left;
             btnTop10.Location = new Point(23, 293);
             btnTop10.Name = "btnTop10";
