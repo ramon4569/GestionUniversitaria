@@ -91,7 +91,7 @@
             btnMenu.CustomizableEdges = customizableEdges1;
             btnMenu.Image = Properties.Resources.image__8_1;
             btnMenu.ImageRotate = 0F;
-            btnMenu.Location = new Point(9, 91);
+            btnMenu.Location = new Point(12, 106);
             btnMenu.Name = "btnMenu";
             btnMenu.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnMenu.Size = new Size(50, 50);
@@ -102,6 +102,7 @@
             // 
             // btnSalir
             // 
+            btnSalir.BackColor = Color.Transparent;
             btnSalir.CustomizableEdges = customizableEdges3;
             btnSalir.DisabledState.BorderColor = Color.DarkGray;
             btnSalir.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -110,6 +111,9 @@
             btnSalir.FillColor = Color.FromArgb(28, 28, 28);
             btnSalir.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSalir.ForeColor = Color.White;
+            btnSalir.Image = Properties.Resources.energia;
+            btnSalir.ImageAlign = HorizontalAlignment.Left;
+            btnSalir.ImageSize = new Size(50, 50);
             btnSalir.Location = new Point(0, 386);
             btnSalir.Name = "btnSalir";
             btnSalir.ShadowDecoration.CustomizableEdges = customizableEdges4;
@@ -216,7 +220,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1166, 40);
+            panel1.Size = new Size(1166, 17);
             panel1.TabIndex = 0;
             // 
             // guna2ControlBox2
@@ -226,7 +230,7 @@
             guna2ControlBox2.CustomizableEdges = customizableEdges11;
             guna2ControlBox2.FillColor = Color.FromArgb(212, 210, 195);
             guna2ControlBox2.IconColor = Color.DimGray;
-            guna2ControlBox2.Location = new Point(1111, 12);
+            guna2ControlBox2.Location = new Point(1114, 0);
             guna2ControlBox2.Name = "guna2ControlBox2";
             guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges12;
             guna2ControlBox2.Size = new Size(23, 17);
@@ -238,7 +242,7 @@
             btnCerrar.CustomizableEdges = customizableEdges13;
             btnCerrar.FillColor = Color.FromArgb(212, 210, 195);
             btnCerrar.IconColor = Color.DimGray;
-            btnCerrar.Location = new Point(1140, 12);
+            btnCerrar.Location = new Point(1143, 0);
             btnCerrar.Name = "btnCerrar";
             btnCerrar.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btnCerrar.Size = new Size(23, 17);
