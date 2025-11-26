@@ -42,7 +42,17 @@ namespace CapaPresentacion
 
         private void frmEstudiantes_Load(object sender, EventArgs e)
         {
-           
+
+        }
+
+        private void guna2GroupBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
