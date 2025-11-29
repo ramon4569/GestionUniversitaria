@@ -31,6 +31,10 @@
             components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -47,21 +51,19 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
             panelRegistro = new Panel();
             guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            btnNuevo = new Guna.UI2.WinForms.Guna2Button();
+            btnGuardar = new Guna.UI2.WinForms.Guna2Button();
             txtTelefono = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             cmbCarrera = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -76,6 +78,7 @@
             txtNombre = new Guna.UI2.WinForms.Guna2TextBox();
             panelListado = new Guna.UI2.WinForms.Guna2Panel();
             guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            guna2DataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
             txtBuscar = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnRegresar = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -83,15 +86,12 @@
             guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(components);
             guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(components);
             guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(components);
-            btnGuardar = new Guna.UI2.WinForms.Guna2Button();
-            btnNuevo = new Guna.UI2.WinForms.Guna2Button();
-            guna2DataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
             panelRegistro.SuspendLayout();
             guna2GroupBox2.SuspendLayout();
             panelListado.SuspendLayout();
             guna2GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)btnRegresar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnRegresar).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -117,6 +117,7 @@
             panelRegistro.Name = "panelRegistro";
             panelRegistro.Size = new Size(934, 561);
             panelRegistro.TabIndex = 2;
+            panelRegistro.Paint += panelRegistro_Paint;
             // 
             // guna2GroupBox2
             // 
@@ -144,6 +145,44 @@
             guna2GroupBox2.Size = new Size(301, 462);
             guna2GroupBox2.TabIndex = 4;
             guna2GroupBox2.Text = "guna2GroupBox2";
+            // 
+            // btnNuevo
+            // 
+            btnNuevo.BorderRadius = 20;
+            btnNuevo.CustomizableEdges = customizableEdges1;
+            btnNuevo.DisabledState.BorderColor = Color.DarkGray;
+            btnNuevo.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnNuevo.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnNuevo.DisabledState.ForeColor = Color.White;
+            btnNuevo.FillColor = Color.FromArgb(28, 28, 28);
+            btnNuevo.Font = new Font("Segoe UI", 9F);
+            btnNuevo.ForeColor = Color.White;
+            btnNuevo.HoverState.FillColor = Color.FromArgb(70, 120, 60);
+            btnNuevo.Location = new Point(173, 220);
+            btnNuevo.Name = "btnNuevo";
+            btnNuevo.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnNuevo.Size = new Size(104, 45);
+            btnNuevo.TabIndex = 21;
+            btnNuevo.Text = "Nuevo";
+            // 
+            // btnGuardar
+            // 
+            btnGuardar.BorderRadius = 20;
+            btnGuardar.CustomizableEdges = customizableEdges3;
+            btnGuardar.DisabledState.BorderColor = Color.DarkGray;
+            btnGuardar.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnGuardar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnGuardar.DisabledState.ForeColor = Color.White;
+            btnGuardar.FillColor = Color.FromArgb(90, 139, 76);
+            btnGuardar.Font = new Font("Segoe UI", 9F);
+            btnGuardar.ForeColor = Color.White;
+            btnGuardar.HoverState.FillColor = Color.FromArgb(70, 120, 60);
+            btnGuardar.Location = new Point(173, 145);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnGuardar.Size = new Size(104, 45);
+            btnGuardar.TabIndex = 20;
+            btnGuardar.Text = "Guardar";
             // 
             // txtTelefono
             // 
@@ -361,6 +400,67 @@
             guna2GroupBox1.Text = "guna2GroupBox1";
             guna2GroupBox1.Click += guna2GroupBox1_Click;
             // 
+            // guna2DataGridView2
+            // 
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(235, 235, 235);
+            dataGridViewCellStyle1.Font = new Font("Segoe Fluent Icons", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.Black;
+            guna2DataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.White;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(28, 28, 28);
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            guna2DataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            guna2DataGridView2.ColumnHeadersHeight = 40;
+            guna2DataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(125, 137, 149);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle3;
+            guna2DataGridView2.GridColor = Color.FromArgb(231, 229, 255);
+            guna2DataGridView2.Location = new Point(29, 196);
+            guna2DataGridView2.Name = "guna2DataGridView2";
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            guna2DataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            guna2DataGridView2.RowHeadersVisible = false;
+            guna2DataGridView2.RowTemplate.Height = 35;
+            guna2DataGridView2.Size = new Size(483, 268);
+            guna2DataGridView2.TabIndex = 3;
+            guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.BackColor = Color.FromArgb(235, 235, 235);
+            guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.Font = new Font("Segoe Fluent Icons", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Black;
+            guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            guna2DataGridView2.ThemeStyle.BackColor = Color.White;
+            guna2DataGridView2.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            guna2DataGridView2.ThemeStyle.HeaderStyle.BackColor = Color.White;
+            guna2DataGridView2.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            guna2DataGridView2.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            guna2DataGridView2.ThemeStyle.HeaderStyle.ForeColor = Color.FromArgb(28, 28, 28);
+            guna2DataGridView2.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            guna2DataGridView2.ThemeStyle.HeaderStyle.Height = 40;
+            guna2DataGridView2.ThemeStyle.ReadOnly = false;
+            guna2DataGridView2.ThemeStyle.RowsStyle.BackColor = Color.White;
+            guna2DataGridView2.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            guna2DataGridView2.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            guna2DataGridView2.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(125, 137, 149);
+            guna2DataGridView2.ThemeStyle.RowsStyle.Height = 35;
+            guna2DataGridView2.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            guna2DataGridView2.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            // 
             // txtBuscar
             // 
             txtBuscar.CustomizableEdges = customizableEdges19;
@@ -424,105 +524,6 @@
             guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
             guna2DragControl1.UseTransparentDrag = true;
             // 
-            // btnGuardar
-            // 
-            btnGuardar.BorderRadius = 20;
-            btnGuardar.CustomizableEdges = customizableEdges3;
-            btnGuardar.DisabledState.BorderColor = Color.DarkGray;
-            btnGuardar.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnGuardar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnGuardar.DisabledState.ForeColor = Color.White;
-            btnGuardar.FillColor = Color.FromArgb(90, 139, 76);
-            btnGuardar.Font = new Font("Segoe UI", 9F);
-            btnGuardar.ForeColor = Color.White;
-            btnGuardar.HoverState.FillColor = Color.FromArgb(70, 120, 60);
-            btnGuardar.Location = new Point(173, 145);
-            btnGuardar.Name = "btnGuardar";
-            btnGuardar.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnGuardar.Size = new Size(104, 45);
-            btnGuardar.TabIndex = 20;
-            btnGuardar.Text = "Guardar";
-            // 
-            // btnNuevo
-            // 
-            btnNuevo.BorderRadius = 20;
-            btnNuevo.CustomizableEdges = customizableEdges1;
-            btnNuevo.DisabledState.BorderColor = Color.DarkGray;
-            btnNuevo.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnNuevo.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnNuevo.DisabledState.ForeColor = Color.White;
-            btnNuevo.FillColor = Color.FromArgb(28, 28, 28);
-            btnNuevo.Font = new Font("Segoe UI", 9F);
-            btnNuevo.ForeColor = Color.White;
-            btnNuevo.HoverState.FillColor = Color.FromArgb(70, 120, 60);
-            btnNuevo.Location = new Point(173, 220);
-            btnNuevo.Name = "btnNuevo";
-            btnNuevo.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnNuevo.Size = new Size(104, 45);
-            btnNuevo.TabIndex = 21;
-            btnNuevo.Text = "Nuevo";
-            // 
-            // guna2DataGridView2
-            // 
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(235, 235, 235);
-            dataGridViewCellStyle1.Font = new Font("Segoe Fluent Icons", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.Black;
-            guna2DataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.White;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = Color.FromArgb(28, 28, 28);
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            guna2DataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            guna2DataGridView2.ColumnHeadersHeight = 40;
-            guna2DataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(125, 137, 149);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle3;
-            guna2DataGridView2.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView2.Location = new Point(29, 196);
-            guna2DataGridView2.Name = "guna2DataGridView2";
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.Control;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            guna2DataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            guna2DataGridView2.RowHeadersVisible = false;
-            guna2DataGridView2.RowTemplate.Height = 35;
-            guna2DataGridView2.Size = new Size(483, 268);
-            guna2DataGridView2.TabIndex = 3;
-            guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.BackColor = Color.FromArgb(235, 235, 235);
-            guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.Font = new Font("Segoe Fluent Icons", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Black;
-            guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            guna2DataGridView2.ThemeStyle.BackColor = Color.White;
-            guna2DataGridView2.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView2.ThemeStyle.HeaderStyle.BackColor = Color.White;
-            guna2DataGridView2.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            guna2DataGridView2.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
-            guna2DataGridView2.ThemeStyle.HeaderStyle.ForeColor = Color.FromArgb(28, 28, 28);
-            guna2DataGridView2.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            guna2DataGridView2.ThemeStyle.HeaderStyle.Height = 40;
-            guna2DataGridView2.ThemeStyle.ReadOnly = false;
-            guna2DataGridView2.ThemeStyle.RowsStyle.BackColor = Color.White;
-            guna2DataGridView2.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            guna2DataGridView2.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
-            guna2DataGridView2.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(125, 137, 149);
-            guna2DataGridView2.ThemeStyle.RowsStyle.Height = 35;
-            guna2DataGridView2.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView2.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            // 
             // frmEstudiantes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -542,8 +543,8 @@
             panelListado.ResumeLayout(false);
             guna2GroupBox1.ResumeLayout(false);
             guna2GroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)btnRegresar).EndInit();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnRegresar).EndInit();
             ResumeLayout(false);
         }
 
