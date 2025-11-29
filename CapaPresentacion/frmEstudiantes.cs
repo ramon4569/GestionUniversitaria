@@ -54,5 +54,10 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void panelRegistro_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
