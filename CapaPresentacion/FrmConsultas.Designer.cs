@@ -113,7 +113,7 @@
             btnVerTodo.Font = new Font("Segoe UI", 9F);
             btnVerTodo.ForeColor = Color.White;
             btnVerTodo.HoverState.FillColor = Color.FromArgb(45, 45, 45);
-            //btnVerTodo.Image = Properties.Resources.estrella;
+            btnVerTodo.Image = Properties.Resources.estrella;
             btnVerTodo.ImageAlign = HorizontalAlignment.Left;
             btnVerTodo.Location = new Point(23, 338);
             btnVerTodo.Name = "btnVerTodo";
@@ -152,11 +152,10 @@
             btnTop10.Font = new Font("Segoe UI", 9F);
             btnTop10.ForeColor = Color.White;
             btnTop10.HoverState.FillColor = Color.FromArgb(45, 45, 45);
-<<<<<<< HEAD
+
             btnTop10.Image = Properties.Resources.Maximizar;
-=======
-           // btnTop10.Image = Properties.Resources.estrella;
->>>>>>> GESTION ESTUDIANTE
+            btnTop10.Image = Properties.Resources.estrella;
+
             btnTop10.ImageAlign = HorizontalAlignment.Left;
             btnTop10.Location = new Point(23, 293);
             btnTop10.Name = "btnTop10";
@@ -184,7 +183,7 @@
             btnPromedios.Font = new Font("Segoe UI", 9F);
             btnPromedios.ForeColor = Color.White;
             btnPromedios.HoverState.FillColor = Color.FromArgb(45, 45, 45);
-            //btnPromedios.Image = Properties.Resources.Chart;
+            btnPromedios.Image = Properties.Resources.Chart;
             btnPromedios.ImageAlign = HorizontalAlignment.Left;
             btnPromedios.Location = new Point(23, 203);
             btnPromedios.Name = "btnPromedios";
@@ -222,7 +221,7 @@
             btnRiesgo.Font = new Font("Segoe UI", 9F);
             btnRiesgo.ForeColor = Color.White;
             btnRiesgo.HoverState.FillColor = Color.FromArgb(45, 45, 45);
-            //btnRiesgo.Image = Properties.Resources.warning;
+            btnRiesgo.Image = Properties.Resources.warning;
             btnRiesgo.ImageAlign = HorizontalAlignment.Left;
             btnRiesgo.Location = new Point(23, 158);
             btnRiesgo.Name = "btnRiesgo";
@@ -272,7 +271,7 @@
             btnReprobadas.Font = new Font("Segoe UI", 9F);
             btnReprobadas.ForeColor = Color.White;
             btnReprobadas.HoverState.FillColor = Color.FromArgb(45, 45, 45);
-            //btnReprobadas.Image = Properties.Resources.close1;
+            btnReprobadas.Image = Properties.Resources.close1;
             btnReprobadas.ImageAlign = HorizontalAlignment.Left;
             btnReprobadas.Location = new Point(23, 248);
             btnReprobadas.Name = "btnReprobadas";
