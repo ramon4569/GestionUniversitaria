@@ -22,13 +22,19 @@ namespace CapaNegocio.ServiciosCD
                 conn.Open();
 
                 string query = @"
-                    SELECT 
-                         e.Matricula, e.Nombre, e.Apellido, e.Carrera, e.Email, e.Telefono,
-                         i.Calificacion,
-                         m.Codigo, m.Nombre AS NomMateria, m.Creditos
-                         FROM Estudiantes e
-                         LEFT JOIN Inscripciones i ON e.IdEstudiante = i.IdEstudiante  -- CAMBIO AQUÍ (IDs)
-                         LEFT JOIN Materias m ON i.IdMateria = m.IdMateria             -- CAMBIO AQUÍ (IDs)
+                                SELECT
+                                e.Matricula, e.Nombre, e.Apellido, e.Carrera,
+                                -- 1. Cambiar i.Calificacion por i.CalificacionFinal
+                                i.CalificacionFinal, 
+                                m.Codigo AS CodigoMateria, m.Nombre AS NombreMateria, m.Creditos,
+                                s.CodigoSeccion -- También es útil traer el código de la sección
+                            FROM Estudiantes e
+                            -- 2. Cambiar Inscripciones por Matriculas
+                            LEFT JOIN Matriculas i ON e.IdEstudiante = i.IdEstudiante
+                            -- 3. Unir a la tabla Secciones
+                            LEFT JOIN Secciones s ON i.IdSeccion = s.IdSeccion
+                            -- 4. Unir a la tabla Materias (a través de la sección)
+                            LEFT JOIN Materias m ON s.IdMateria = m.IdMateria
                          ";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
