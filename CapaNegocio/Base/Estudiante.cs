@@ -10,8 +10,21 @@ namespace CapaNegocio.Base
 {
     public partial class Estudiante : Persona, ICalificable, IComparable<Estudiante>
     {
-        public string Matricula { get; set; }
+        // Propiedades que coinciden con los campos de la tabla Estudiantes
+        public int IdEstudiante { get; set; }
+        public string Matricula { get; set; } // Clave principal de negocio
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
         public string Carrera { get; set; }
+        public string Email { get; set; }
+        public string Telefono { get; set; }
+        public DateTime FechaRegistro { get; set; }
+        public int SemestreActual { get; set; }
+
+        public string NombreCompleto
+        {
+            get { return $"{Nombre} {Apellido}"; }
+        }
 
         // Lista de materias que ha inscrito este estudiante
         public List<Inscripcion> MateriasCursadas { get; set; }
