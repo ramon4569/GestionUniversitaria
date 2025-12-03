@@ -27,7 +27,7 @@ namespace CapaPresentacion
     public partial class Login : Form
     {
         // Opción 1: Si el bueno está en Acceso
-        private UsuarioService _authService = new UsuarioService();
+        private CapaNegocio.Acceso.UsuarioService _authService = new CapaNegocio.Acceso.UsuarioService();
 
         public Login()
         {

@@ -1,42 +1,74 @@
 ﻿using Microsoft.Data.SqlClient;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CapaDatos.Conexion
 {
     public class Conexion
     {
-        private SqlConnection conexion;
+        // La cadena de conexión como campo privado
+        private readonly string cadenaConexion = "Server=.;Database=GestionAcademicaUCE;Integrated Security=True;TrustServerCertificate=True;";
 
         public Conexion()
         {
-            
-            string cadenaConexion = "Server=. ;Database=GestionAcademicaUCE;Integrated Security=True;TrustServerCertificate=True;";
-            conexion = new SqlConnection(cadenaConexion);
+            // Validar que la cadena de conexión sea válida al instanciar
+            try
+            {
+                // Verificar que la cadena sea válida creando temporalmente una conexión
+                using (var testConn = new SqlConnection(cadenaConexion))
+                {
+                    // No hacemos nada, solo validamos que la cadena sea correcta
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException(
+                    "Error al inicializar la conexión. Verifique la cadena de conexión en la clase Conexion.cs y asegúrese de que el servidor SQL esté activo.",
+                    ex);
+            }
         }
 
-        // Método para abrir la conexión
-        public void Abrir()
-        {
-            if (conexion.State == ConnectionState.Closed)
-                conexion.Open();
-        }
-
-        // Método para cerrar la conexión
-        public void Cerrar()
-        {
-            if (conexion.State == ConnectionState.Open)
-                conexion.Close();
-        }
-
-        // Obtener la conexión (para usarla en los comandos SQL)
+        /// <summary>
+        /// Devuelve una NUEVA instancia de SqlConnection cada vez que se llama.
+        /// Esto permite usar el patrón 'using' correctamente.
+        /// </summary>
         public SqlConnection ObtenerConexion()
         {
-            return conexion;
+            return new SqlConnection(cadenaConexion);
+        }
+
+        // MÉTODOS LEGACY (para compatibilidad con código antiguo que no usa 'using')
+        // Estos métodos mantienen una conexión interna para abrir/cerrar manualmente
+        private SqlConnection conexionManual;
+
+        public void Abrir()
+        {
+            if (conexionManual == null)
+            {
+                conexionManual = new SqlConnection(cadenaConexion);
+            }
+
+            if (conexionManual.State == ConnectionState.Closed)
+            {
+                conexionManual.Open();
+            }
+        }
+
+        public void Cerrar()
+        {
+            if (conexionManual != null && conexionManual.State == ConnectionState.Open)
+            {
+                conexionManual.Close();
+            }
+        }
+
+        public SqlConnection ObtenerConexionManual()
+        {
+            if (conexionManual == null)
+            {
+                conexionManual = new SqlConnection(cadenaConexion);
+            }
+            return conexionManual;
         }
     }
 }

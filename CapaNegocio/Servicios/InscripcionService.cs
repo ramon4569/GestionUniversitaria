@@ -1,4 +1,6 @@
-﻿using CapaNegocio.Excepciones;
+﻿// InscripcionService.cs (CORREGIDO)
+
+using CapaNegocio.Excepciones;
 using CapaNegocio.ServiciosCD;
 using CapaNegocio.Servicios;
 using System;
@@ -6,6 +8,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CapaNegocio.Excepciones.CapaNegocio.Excepciones;
+// *** ELIMINAR ESTA LÍNEA O CORREGIR EL NAMESPACE DUPLICADO ***
+// using CapaNegocio.Excepciones.CapaNegocio.Excepciones; 
 
 namespace CapaNegocio.Servicios
 {
@@ -16,7 +21,6 @@ namespace CapaNegocio.Servicios
         // Opción 2 del Menú: Inscribir
         public void InscribirMateria(string matricula, string codigoMateria)
         {
-            // Validar que no esté inscrito ya (Lógica podría ir en DAL o aquí)
             if (_inscripcionDAL.ExisteInscripcion(matricula, codigoMateria))
             {
                 throw new Exception("El estudiante ya tiene inscrita esta materia.");
@@ -26,17 +30,16 @@ namespace CapaNegocio.Servicios
         }
 
         // Opción 3 del Menú: Calificar
-        // En InscripcionService.cs
-
         public void RegistrarCalificacion(string matricula, string codigoMateria, double nota)
         {
             // 1. Validación de Rango (0-100)
             if (nota < 0 || nota > 100)
             {
-                throw new CalificacionInvalidaException(nota);
+                // CORRECCIÓN: Pasar un string al constructor de la excepción
+                throw new CalificacionInvalidaException($"La calificación {nota} debe estar entre 0 y 100.");
             }
 
-            // 2. Guardar (Ahora sí coinciden los tipos de datos con el DAL)
+            // 2. Guardar
             _inscripcionDAL.ActualizarNota(matricula, codigoMateria, nota);
         }
     }

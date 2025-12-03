@@ -12,6 +12,8 @@ namespace CapaNegocio.Base
         public string Codigo { get; set; } // Ej: ISW-122
         public string Nombre { get; set; }
         public int Creditos { get; set; }
+        public int IdMateria {get; set; }
+        public string Display => $"{Codigo} - {Nombre} ({Creditos} Créditos)";
 
         public override string ToString()
         {

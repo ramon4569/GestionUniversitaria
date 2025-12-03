@@ -1,17 +1,22 @@
-﻿using CapaNegocio.Base;
+﻿// CapaNegocio/Servicios/ConsultasService.cs (Corregido y Listo para LINQ)
 
+using CapaNegocio.Base;
+// *** Asegúrate de que este namespace exista y contenga EstudianteDAL o similar ***
 using CapaNegocio.ServiciosCD;
 using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Linq; // CRUCIAL para todas las consultas LINQ
 using System.Text;
 using System.Threading.Tasks;
 
+// Nota: Asegúrate de que el archivo esté en la carpeta 'Servicios'
 namespace CapaNegocio.Servicios
 {
     public class ConsultasService
     {
-        // Necesitamos traer los datos completos para procesarlos con LINQ
+        // Instancia de Acceso a Datos (DAL / CD) para obtener la data completa
+        // Asegúrate de que EstudianteDAL tenga el método ObtenerTodosCompletos() 
+        // y que devuelva List<Estudiante>
         private EstudianteDAL _estudianteDAL = new EstudianteDAL();
 
         public object ObtenerListadoGeneral()
@@ -30,7 +35,7 @@ namespace CapaNegocio.Servicios
         }
 
         // -----------------------------------------------------------
-        // 2. BUSCADOR (Probablemente también te falte este)
+        // 2. BUSCADOR (Where)
         // -----------------------------------------------------------
         public object BuscarEstudiante(string texto)
         {
@@ -38,6 +43,7 @@ namespace CapaNegocio.Servicios
 
             if (string.IsNullOrEmpty(texto)) return ObtenerListadoGeneral();
 
+            // Aplicación de Where() para el filtro
             return lista
                 .Where(e => e.Nombre.ToLower().Contains(texto.ToLower()) ||
                             e.Apellido.ToLower().Contains(texto.ToLower()) ||
@@ -51,13 +57,14 @@ namespace CapaNegocio.Servicios
                 }).ToList();
         }
 
-        // 1. Estudiantes en Riesgo (Indice < 2.0)
+        // 1. Estudiantes en Riesgo (Where, OrderBy)
         public object ObtenerEstudiantesEnRiesgo()
         {
-            List<Estudiante> lista = _estudianteDAL.ObtenerTodosCompletos(); // Trae estudiantes + materias
+            List<Estudiante> lista = _estudianteDAL.ObtenerTodosCompletos();
 
+            // Aplicación de Where() e OrderBy()
             return lista
-                .Where(e => e.IndiceAcademico < 2.0 && e.MateriasCursadas.Any())
+                .Where(e => e.IndiceAcademico < 2.0m && e.MateriasCursadas.Any()) // Usar 'm' para decimal si IndiceAcademico es decimal
                 .OrderBy(e => e.IndiceAcademico)
                 .Select(e => new {
                     Matricula = e.Matricula,
@@ -66,27 +73,28 @@ namespace CapaNegocio.Servicios
                 }).ToList();
         }
 
-        // 2. Promedio por Carrera (GroupBy)
+        // 2. Promedio por Carrera (GroupBy, Average, Count)
         public object ObtenerPromedioPorCarrera()
         {
             List<Estudiante> lista = _estudianteDAL.ObtenerTodosCompletos();
 
+            // Aplicación de GroupBy(), Count() y Average()
             return lista
                 .GroupBy(e => e.Carrera)
                 .Select(grupo => new {
                     Carrera = grupo.Key,
                     Cantidad = grupo.Count(),
-                    Promedio = Math.Round(grupo.Average(e => e.IndiceAcademico), 2)
+                    // Promedio requiere que IndiceAcademico sea numérico (decimal o double)
+                    Promedio = Math.Round(grupo.Average(e => (double)e.IndiceAcademico), 2)
                 }).ToList();
         }
 
-        // Método para filtrar específicamente por Carrera
+        // Método para filtrar específicamente por Carrera (Where)
         public object ObtenerPorCarrera(string carreraSeleccionada)
         {
-            // Traemos todos los datos
             var todos = _estudianteDAL.ObtenerTodosCompletos();
 
-            // Filtramos con LINQ
+            // Aplicación de Where()
             return todos
                 .Where(e => e.Carrera.Equals(carreraSeleccionada, StringComparison.OrdinalIgnoreCase))
                 .Select(e => new {
@@ -98,16 +106,19 @@ namespace CapaNegocio.Servicios
                 }).ToList();
         }
 
-        // 3. Materias más Reprobadas (SelectMany + Count)
+        // 3. Materias más Reprobadas (SelectMany, Where, GroupBy, Count)
         public object ObtenerMateriasReprobadas()
         {
             List<Estudiante> lista = _estudianteDAL.ObtenerTodosCompletos();
 
-            // Aplanamos todas las inscripciones de todos los estudiantes
+            // SelectMany() aplana la lista de listas (todas las inscripciones de todos los estudiantes)
             var todasLasInscripciones = lista.SelectMany(e => e.MateriasCursadas);
 
+            // Aplicación de SelectMany(), Where(), GroupBy(), Count() y OrderByDescending()
             return todasLasInscripciones
-                .Where(i => i.Calificacion != null && i.Calificacion < 70) // Reprobados
+                // Nota: Usar CalificacionFinal que está en Inscripcion.
+                // Asumo que 'Calificacion' es un alias de CalificacionFinal en la Entidad Inscripcion.
+                .Where(i => i.CalificacionFinal.HasValue && i.CalificacionFinal.Value < 70) // Reprobados
                 .GroupBy(i => i.Materia.Codigo)
                 .Select(grupo => new {
                     Materia = grupo.First().Materia.Nombre,
@@ -117,10 +128,12 @@ namespace CapaNegocio.Servicios
                 .ToList();
         }
 
+        // Top Estudiantes (OrderByDescending, Take, Select)
         public object ObtenerTopEstudiantes()
         {
             List<Estudiante> lista = _estudianteDAL.ObtenerTodosCompletos();
 
+            // Aplicación de OrderByDescending(), Take() y Select()
             return lista
                 .OrderByDescending(e => e.IndiceAcademico)
                 .Take(10)
@@ -128,12 +141,10 @@ namespace CapaNegocio.Servicios
                     Matricula = e.Matricula,
                     Nombre = $"{e.Nombre} {e.Apellido}",
                     Indice = e.IndiceAcademico,
-                    Honor = e.IndiceAcademico >= 3.8 ? "Summa Cum Laude" :
-                            e.IndiceAcademico >= 3.5 ? "Magna Cum Laude" : "Cum Laude"
+                    // Lógica de Honores
+                    Honor = e.IndiceAcademico >= 3.8m ? "Summa Cum Laude" :
+                            e.IndiceAcademico >= 3.5m ? "Magna Cum Laude" : "Cum Laude"
                 }).ToList();
         }
     }
 }
-
-
-
