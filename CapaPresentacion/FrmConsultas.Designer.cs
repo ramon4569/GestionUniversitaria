@@ -42,8 +42,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -51,8 +51,6 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             PanelFiltros = new Guna.UI2.WinForms.Guna2Panel();
             btnVerTodo = new Guna.UI2.WinForms.Guna2Button();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -66,13 +64,12 @@
             PanelContenedor = new Guna.UI2.WinForms.Guna2Panel();
             lblTotalResultados = new Label();
             btnRegresar = new Guna.UI2.WinForms.Guna2PictureBox();
-            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            gunaDgvConsultas = new Guna.UI2.WinForms.Guna2DataGridView();
             TxtBuscar = new Guna.UI2.WinForms.Guna2TextBox();
+            sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
+            gunaDgvConsultas = new Guna.UI2.WinForms.Guna2DataGridView();
             PanelFiltros.SuspendLayout();
             PanelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnRegresar).BeginInit();
-            guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)gunaDgvConsultas).BeginInit();
             SuspendLayout();
             // 
@@ -92,7 +89,7 @@
             PanelFiltros.Location = new Point(0, 0);
             PanelFiltros.Name = "PanelFiltros";
             PanelFiltros.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            PanelFiltros.Size = new Size(213, 600);
+            PanelFiltros.Size = new Size(213, 678);
             PanelFiltros.TabIndex = 0;
             // 
             // btnVerTodo
@@ -292,19 +289,19 @@
             // 
             PanelContenedor.BackColor = Color.White;
             PanelContenedor.BorderColor = Color.White;
+            PanelContenedor.Controls.Add(gunaDgvConsultas);
             PanelContenedor.Controls.Add(lblTotalResultados);
             PanelContenedor.Controls.Add(lblTitulo);
             PanelContenedor.Controls.Add(btnRegresar);
-            PanelContenedor.Controls.Add(guna2Panel1);
             PanelContenedor.Controls.Add(TxtBuscar);
-            PanelContenedor.CustomizableEdges = customizableEdges21;
+            PanelContenedor.CustomizableEdges = customizableEdges19;
             PanelContenedor.Dock = DockStyle.Fill;
             PanelContenedor.FillColor = Color.White;
             PanelContenedor.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             PanelContenedor.Location = new Point(213, 0);
             PanelContenedor.Name = "PanelContenedor";
-            PanelContenedor.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            PanelContenedor.Size = new Size(737, 600);
+            PanelContenedor.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            PanelContenedor.Size = new Size(1133, 678);
             PanelContenedor.TabIndex = 1;
             // 
             // lblTotalResultados
@@ -333,78 +330,11 @@
             btnRegresar.TabStop = false;
             btnRegresar.Click += btnRegresar_Click;
             // 
-            // guna2Panel1
-            // 
-            guna2Panel1.BorderRadius = 25;
-            guna2Panel1.Controls.Add(gunaDgvConsultas);
-            guna2Panel1.CustomizableEdges = customizableEdges17;
-            guna2Panel1.Location = new Point(15, 137);
-            guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            guna2Panel1.Size = new Size(710, 401);
-            guna2Panel1.TabIndex = 8;
-            // 
-            // gunaDgvConsultas
-            // 
-            gunaDgvConsultas.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = Color.White;
-            gunaDgvConsultas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            gunaDgvConsultas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            gunaDgvConsultas.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            gunaDgvConsultas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            gunaDgvConsultas.ColumnHeadersHeight = 4;
-            gunaDgvConsultas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            gunaDgvConsultas.DefaultCellStyle = dataGridViewCellStyle3;
-            gunaDgvConsultas.Dock = DockStyle.Fill;
-            gunaDgvConsultas.GridColor = Color.FromArgb(231, 229, 255);
-            gunaDgvConsultas.Location = new Point(0, 0);
-            gunaDgvConsultas.Name = "gunaDgvConsultas";
-            gunaDgvConsultas.ReadOnly = true;
-            gunaDgvConsultas.RowHeadersVisible = false;
-            gunaDgvConsultas.RowTemplate.Height = 40;
-            gunaDgvConsultas.Size = new Size(710, 401);
-            gunaDgvConsultas.TabIndex = 7;
-            gunaDgvConsultas.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            gunaDgvConsultas.ThemeStyle.AlternatingRowsStyle.Font = null;
-            gunaDgvConsultas.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            gunaDgvConsultas.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            gunaDgvConsultas.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            gunaDgvConsultas.ThemeStyle.BackColor = Color.White;
-            gunaDgvConsultas.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            gunaDgvConsultas.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(28, 28, 28);
-            gunaDgvConsultas.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.Single;
-            gunaDgvConsultas.ThemeStyle.HeaderStyle.Font = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            gunaDgvConsultas.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            gunaDgvConsultas.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            gunaDgvConsultas.ThemeStyle.HeaderStyle.Height = 4;
-            gunaDgvConsultas.ThemeStyle.ReadOnly = true;
-            gunaDgvConsultas.ThemeStyle.RowsStyle.BackColor = Color.WhiteSmoke;
-            gunaDgvConsultas.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            gunaDgvConsultas.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
-            gunaDgvConsultas.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            gunaDgvConsultas.ThemeStyle.RowsStyle.Height = 40;
-            gunaDgvConsultas.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            gunaDgvConsultas.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            // 
             // TxtBuscar
             // 
             TxtBuscar.BackColor = Color.White;
             TxtBuscar.BorderRadius = 15;
-            TxtBuscar.CustomizableEdges = customizableEdges19;
+            TxtBuscar.CustomizableEdges = customizableEdges17;
             TxtBuscar.DefaultText = "";
             TxtBuscar.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             TxtBuscar.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -420,16 +350,70 @@
             TxtBuscar.Name = "TxtBuscar";
             TxtBuscar.PlaceholderText = "Buscar por nombre o matrícula";
             TxtBuscar.SelectedText = "";
-            TxtBuscar.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            TxtBuscar.Size = new Size(326, 36);
+            TxtBuscar.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            TxtBuscar.Size = new Size(1052, 36);
             TxtBuscar.TabIndex = 6;
             TxtBuscar.TextChanged += TxtBuscar_TextChanged;
+            // 
+            // sqlCommand1
+            // 
+            sqlCommand1.CommandTimeout = 30;
+            sqlCommand1.EnableOptimizedParameterBinding = false;
+            // 
+            // gunaDgvConsultas
+            // 
+            dataGridViewCellStyle1.BackColor = Color.White;
+            gunaDgvConsultas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            gunaDgvConsultas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            gunaDgvConsultas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            gunaDgvConsultas.DefaultCellStyle = dataGridViewCellStyle3;
+            gunaDgvConsultas.GridColor = Color.FromArgb(231, 229, 255);
+            gunaDgvConsultas.Location = new Point(18, 137);
+            gunaDgvConsultas.Name = "gunaDgvConsultas";
+            gunaDgvConsultas.RowHeadersVisible = false;
+            gunaDgvConsultas.Size = new Size(1052, 359);
+            gunaDgvConsultas.TabIndex = 10;
+            gunaDgvConsultas.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            gunaDgvConsultas.ThemeStyle.AlternatingRowsStyle.Font = null;
+            gunaDgvConsultas.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            gunaDgvConsultas.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            gunaDgvConsultas.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            gunaDgvConsultas.ThemeStyle.BackColor = Color.White;
+            gunaDgvConsultas.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            gunaDgvConsultas.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            gunaDgvConsultas.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            gunaDgvConsultas.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gunaDgvConsultas.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            gunaDgvConsultas.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            gunaDgvConsultas.ThemeStyle.HeaderStyle.Height = 4;
+            gunaDgvConsultas.ThemeStyle.ReadOnly = false;
+            gunaDgvConsultas.ThemeStyle.RowsStyle.BackColor = Color.White;
+            gunaDgvConsultas.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            gunaDgvConsultas.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gunaDgvConsultas.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            gunaDgvConsultas.ThemeStyle.RowsStyle.Height = 25;
+            gunaDgvConsultas.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            gunaDgvConsultas.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
             // FrmConsultas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(950, 600);
+            ClientSize = new Size(1346, 678);
             Controls.Add(PanelContenedor);
             Controls.Add(PanelFiltros);
             FormBorderStyle = FormBorderStyle.None;
@@ -442,7 +426,6 @@
             PanelContenedor.ResumeLayout(false);
             PanelContenedor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)btnRegresar).EndInit();
-            guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)gunaDgvConsultas).EndInit();
             ResumeLayout(false);
         }
@@ -459,11 +442,11 @@
         private Guna.UI2.WinForms.Guna2Button btnReprobadas;
         private Guna.UI2.WinForms.Guna2Button btnTop10;
         private Guna.UI2.WinForms.Guna2TextBox TxtBuscar;
-        private Guna.UI2.WinForms.Guna2DataGridView gunaDgvConsultas;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2PictureBox btnRegresar;
         private Label lblTotalResultados;
         private Label lblTitulo;
         private Guna.UI2.WinForms.Guna2Button btnVerTodo;
+        private Guna.UI2.WinForms.Guna2DataGridView gunaDgvConsultas;
+        private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
     }
 }

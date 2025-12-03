@@ -484,6 +484,7 @@ namespace CapaPresentacion
                 txtNota.Focus();
                 txtNota.SelectAll();
             }
+            
         }
 
         // ----------------------------------------------------------------------
