@@ -54,15 +54,15 @@
             btnEstudiantes = new Guna.UI2.WinForms.Guna2Button();
             panelLogo = new Panel();
             pictureBox1 = new PictureBox();
-            panelContenedor = new Panel();
-            panel1 = new Panel();
-            guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
-            btnCerrar = new Guna.UI2.WinForms.Guna2ControlBox();
             SidebarTimer = new System.Windows.Forms.Timer(components);
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(components);
             guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(components);
             guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(components);
+            panelContenedor = new Panel();
+            panel1 = new Panel();
+            guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+            btnCerrar = new Guna.UI2.WinForms.Guna2ControlBox();
             panelMenuLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnMenu).BeginInit();
             panelLogo.SuspendLayout();
@@ -87,7 +87,7 @@
             panelMenuLateral.MaximumSize = new Size(250, 0);
             panelMenuLateral.MinimumSize = new Size(70, 0);
             panelMenuLateral.Name = "panelMenuLateral";
-            panelMenuLateral.Size = new Size(250, 678);
+            panelMenuLateral.Size = new Size(70, 678);
             panelMenuLateral.TabIndex = 0;
             // 
             // guna2Button1
@@ -149,6 +149,7 @@
             // 
             // guna2Button3
             // 
+            guna2Button3.BackColor = Color.Transparent;
             guna2Button3.CustomizableEdges = customizableEdges7;
             guna2Button3.DisabledState.BorderColor = Color.DarkGray;
             guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -170,6 +171,7 @@
             // 
             // btnConsultas
             // 
+            btnConsultas.BackColor = Color.Transparent;
             btnConsultas.CustomizableEdges = customizableEdges9;
             btnConsultas.DisabledState.BorderColor = Color.DarkGray;
             btnConsultas.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -191,6 +193,7 @@
             // 
             // btnEstudiantes
             // 
+            btnEstudiantes.BackColor = Color.Transparent;
             btnEstudiantes.CustomizableEdges = customizableEdges11;
             btnEstudiantes.DisabledState.BorderColor = Color.DarkGray;
             btnEstudiantes.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -216,7 +219,7 @@
             panelLogo.Dock = DockStyle.Top;
             panelLogo.Location = new Point(0, 0);
             panelLogo.Name = "panelLogo";
-            panelLogo.Size = new Size(250, 100);
+            panelLogo.Size = new Size(70, 100);
             panelLogo.TabIndex = 0;
             // 
             // pictureBox1
@@ -224,56 +227,9 @@
             pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(250, 100);
+            pictureBox1.Size = new Size(70, 100);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
-            // 
-            // panelContenedor
-            // 
-            panelContenedor.BackColor = Color.FromArgb(212, 210, 195);
-            panelContenedor.Controls.Add(panel1);
-            panelContenedor.Dock = DockStyle.Fill;
-            panelContenedor.Location = new Point(250, 0);
-            panelContenedor.Name = "panelContenedor";
-            panelContenedor.Size = new Size(1166, 678);
-            panelContenedor.TabIndex = 1;
-            panelContenedor.Paint += panelContenedor_Paint;
-            // 
-            // panel1
-            // 
-            panel1.Controls.Add(guna2ControlBox2);
-            panel1.Controls.Add(btnCerrar);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1166, 17);
-            panel1.TabIndex = 0;
-            // 
-            // guna2ControlBox2
-            // 
-            guna2ControlBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            guna2ControlBox2.CustomizableEdges = customizableEdges13;
-            guna2ControlBox2.FillColor = Color.FromArgb(212, 210, 195);
-            guna2ControlBox2.IconColor = Color.DimGray;
-            guna2ControlBox2.Location = new Point(1114, 0);
-            guna2ControlBox2.Name = "guna2ControlBox2";
-            guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2ControlBox2.Size = new Size(23, 17);
-            guna2ControlBox2.TabIndex = 10;
-            // 
-            // btnCerrar
-            // 
-            btnCerrar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnCerrar.CustomizableEdges = customizableEdges15;
-            btnCerrar.FillColor = Color.FromArgb(212, 210, 195);
-            btnCerrar.IconColor = Color.DimGray;
-            btnCerrar.Location = new Point(1143, 0);
-            btnCerrar.Name = "btnCerrar";
-            btnCerrar.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            btnCerrar.Size = new Size(23, 17);
-            btnCerrar.TabIndex = 9;
-            btnCerrar.Click += btnCerrar_Click;
             // 
             // SidebarTimer
             // 
@@ -299,6 +255,55 @@
             guna2DragControl1.TargetControl = panelContenedor;
             guna2DragControl1.UseTransparentDrag = true;
             // 
+            // panelContenedor
+            // 
+            panelContenedor.BackColor = Color.White;
+            panelContenedor.Controls.Add(panel1);
+            panelContenedor.Dock = DockStyle.Fill;
+            panelContenedor.Location = new Point(70, 0);
+            panelContenedor.Name = "panelContenedor";
+            panelContenedor.Size = new Size(1346, 678);
+            panelContenedor.TabIndex = 1;
+            panelContenedor.Paint += panelContenedor_Paint;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.Black;
+            panel1.Controls.Add(guna2ControlBox2);
+            panel1.Controls.Add(btnCerrar);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1346, 17);
+            panel1.TabIndex = 0;
+            // 
+            // guna2ControlBox2
+            // 
+            guna2ControlBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            guna2ControlBox2.BackColor = Color.Black;
+            guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            guna2ControlBox2.CustomizableEdges = customizableEdges13;
+            guna2ControlBox2.FillColor = Color.FromArgb(212, 210, 195);
+            guna2ControlBox2.IconColor = Color.DimGray;
+            guna2ControlBox2.Location = new Point(1294, 0);
+            guna2ControlBox2.Name = "guna2ControlBox2";
+            guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            guna2ControlBox2.Size = new Size(23, 17);
+            guna2ControlBox2.TabIndex = 10;
+            // 
+            // btnCerrar
+            // 
+            btnCerrar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnCerrar.CustomizableEdges = customizableEdges15;
+            btnCerrar.FillColor = Color.FromArgb(212, 210, 195);
+            btnCerrar.IconColor = Color.DimGray;
+            btnCerrar.Location = new Point(1323, 0);
+            btnCerrar.Name = "btnCerrar";
+            btnCerrar.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnCerrar.Size = new Size(23, 17);
+            btnCerrar.TabIndex = 9;
+            btnCerrar.Click += btnCerrar_Click;
+            // 
             // frmMenuPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -322,13 +327,9 @@
         #endregion
 
         private Panel panelMenuLateral;
-        private Panel panelContenedor;
         private Panel panelLogo;
-        private Panel panel1;
         private PictureBox pictureBox1;
         private System.Windows.Forms.Timer SidebarTimer;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
-        private Guna.UI2.WinForms.Guna2ControlBox btnCerrar;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
@@ -339,5 +340,9 @@
         private Guna.UI2.WinForms.Guna2Button btnEstudiantes;
         private Guna.UI2.WinForms.Guna2PictureBox btnMenu;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Panel panelContenedor;
+        private Panel panel1;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
+        private Guna.UI2.WinForms.Guna2ControlBox btnCerrar;
     }
 }

@@ -152,10 +152,7 @@
             btnTop10.Font = new Font("Segoe UI", 9F);
             btnTop10.ForeColor = Color.White;
             btnTop10.HoverState.FillColor = Color.FromArgb(45, 45, 45);
-
-            btnTop10.Image = Properties.Resources.Maximizar;
             btnTop10.Image = Properties.Resources.estrella;
-
             btnTop10.ImageAlign = HorizontalAlignment.Left;
             btnTop10.Location = new Point(23, 293);
             btnTop10.Name = "btnTop10";
@@ -353,7 +350,6 @@
             dataGridViewCellStyle1.BackColor = Color.White;
             gunaDgvConsultas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             gunaDgvConsultas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            gunaDgvConsultas.BackgroundColor = Color.FromArgb(212, 210, 195);
             gunaDgvConsultas.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
@@ -387,7 +383,7 @@
             gunaDgvConsultas.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
             gunaDgvConsultas.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
             gunaDgvConsultas.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            gunaDgvConsultas.ThemeStyle.BackColor = Color.FromArgb(212, 210, 195);
+            gunaDgvConsultas.ThemeStyle.BackColor = Color.White;
             gunaDgvConsultas.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
             gunaDgvConsultas.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(28, 28, 28);
             gunaDgvConsultas.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.Single;
