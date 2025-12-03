@@ -18,6 +18,14 @@ namespace CapaNegocio.Base
 
             // Propiedad de ayuda para mostrar nombre completo
             public string NombreCompleto => $"{Nombre} {Apellido}";
+
+            protected Persona(string nombre, string apellido)
+            {
+                Nombre = nombre;
+                Apellido = apellido;
+            }
         }
+
+
     }
 }

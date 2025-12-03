@@ -8,18 +8,19 @@ using System.Threading.Tasks;
 
 namespace CapaNegocio.Base
 {
-    public partial class Estudiante : Persona, ICalificable, IComparable<Estudiante>
+    public partial class Estudiante : Persona, IComparable<Estudiante>
     {
         // Propiedades que coinciden con los campos de la tabla Estudiantes
         public int IdEstudiante { get; set; }
-        public string Matricula { get; set; } // Clave principal de negocio
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
-        public string Carrera { get; set; }
-        public string Email { get; set; }
-        public string Telefono { get; set; }
+        public  string Matricula { get; set; } // Clave principal de negocio
+        public  string Nombre { get; set; }
+        public  string Apellido { get; set; }
+        public  string Carrera { get; set; }
+        public  string Email { get; set; }
+        public  string Telefono { get; set; }
         public DateTime FechaRegistro { get; set; }
         public int SemestreActual { get; set; }
+        public decimal IndiceAcademico { get; set; } = 0.00m; // Se calcula aparte o se carga.
 
         public string NombreCompleto
         {
@@ -30,10 +31,25 @@ namespace CapaNegocio.Base
         public List<Inscripcion> MateriasCursadas { get; set; }
 
         // Constructor para inicializar la lista y evitar errores
-        public Estudiante()
+        public Estudiante(string matricula, string nombre, string apellido, string carrera)
+                 : base(nombre, apellido)
         {
+            Matricula = matricula;
+            Carrera = carrera;
             MateriasCursadas = new List<Inscripcion>();
         }
+
+        public Estudiante() : base(string.Empty, string.Empty)
+        {
+            // Inicializa la clase base Persona para evitar el error de compilación
+        }
+        public int CompareTo(Estudiante other)
+        {
+            if (other == null) return 1;
+            // Ordenar de mayor a menor índice académico
+            return other.IndiceAcademico.CompareTo(this.IndiceAcademico);
+        }
+
 
         // --- LÓGICA DEL ÍNDICE ACADÉMICO (Requisito BLL) ---
         // Implementación de ICalificable
@@ -54,15 +70,9 @@ namespace CapaNegocio.Base
             return Math.Round(totalPuntos / totalCreditos, 2);
         }
 
-        // Propiedad de solo lectura para acceder fácil al índice
-        public double IndiceAcademico => CalcularIndice();
+      
 
-        // --- COMPARACIÓN (Requisito IComparable) ---
-        // Permite ordenar una lista de estudiantes automáticamente (por matrícula)
-        public int CompareTo(Estudiante otro)
-        {
-            if (otro == null) return 1;
-            return this.Matricula.CompareTo(otro.Matricula);
-        }
+ 
     }
 }
+    

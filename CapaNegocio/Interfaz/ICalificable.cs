@@ -8,6 +8,10 @@ namespace CapaNegocio.Interfaz
 {
     public interface ICalificable
     {
-        double CalcularIndice();
+        double? CalificacionFinal { get; set; }
+        int Creditos { get; }
+
+        // Método para registrar la calificación, podría lanzar CalificacionInvalidaException
+        void RegistrarCalificacion(double nota);
     }
 }

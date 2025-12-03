@@ -6,9 +6,38 @@ using System.Threading.Tasks;
 
 namespace CapaNegocio.Excepciones
 {
-    public class CalificacionInvalidaException : Exception
+    // Excepciones/CalificacionInvalidaException.cs
+
+    using System;
+    using System.Runtime.Serialization;
+
+    namespace CapaNegocio.Excepciones
     {
-        public CalificacionInvalidaException(double nota)
-            : base($"La calificación {nota} no es válida. Debe estar entre 0 y 100.") { }
+        // Asegúrate de que herede de System.Exception (o ApplicationException)
+        public class CalificacionInvalidaException : Exception
+        {
+            // 1. Constructor básico
+            public CalificacionInvalidaException()
+            {
+            }
+
+            // 2. Constructor que acepta el mensaje (el que estás usando)
+            public CalificacionInvalidaException(string message)
+                : base(message)
+            {
+            }
+
+            // 3. Constructor para encadenar excepciones
+            public CalificacionInvalidaException(string message, Exception innerException)
+                : base(message, innerException)
+            {
+            }
+
+            // 4. Constructor para serialización (opcional pero recomendado)
+            protected CalificacionInvalidaException(SerializationInfo info, StreamingContext context)
+                : base(info, context)
+            {
+            }
+        }
     }
 }
