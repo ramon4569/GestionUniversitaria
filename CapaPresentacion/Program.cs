@@ -1,30 +1,36 @@
+using System;
+using System.Windows.Forms;
+
 namespace CapaPresentacion
 {
     internal static class Program
     {
         /// <summary>
-        ///  The main entry point for the application.
+        /// Punto de entrada principal para la aplicación.
         /// </summary>
         [STAThread]
         static void Main()
         {
-            ApplicationConfiguration.Initialize();
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
 
-            // 1. Creamos el Login (pero no iniciamos la App con él todavía)
-            Login login = new Login(); // Asegúrate de que tu clase se llame 'Login' o 'frmLogin'
+            // Iniciar con el Login
+            Login loginForm = new Login();
 
-            // 2. Lo mostramos como un Diálogo (Modal)
-            // Esto pausa el código aquí hasta que el usuario entre o cierre la ventana.
-            if (login.ShowDialog() == DialogResult.OK)
+            // ShowDialog() detiene la ejecución aquí hasta que el Login se cierre
+            DialogResult resultado = loginForm.ShowDialog();
+
+            // Si el login fue exitoso, NO HACEMOS NADA AQUÍ
+            // Porque frmBarra ya abrió el menú principal
+            // Solo dejamos que la aplicación siga corriendo
+            if (resultado == DialogResult.OK)
             {
-                // 3. Si el Login dijo "OK" (Usuario válido), entonces AHORA SÍ arrancamos el Menú
-                Application.Run(new frmMenuPrincipal());
+                // La barra de carga ya abrió el menú, así que solo mantenemos la aplicación viva
+                // Application.Run() sin parámetros mantiene la aplicación corriendo
+                // hasta que todas las ventanas se cierren
+                Application.Run();
             }
-            else
-            {
-                // 4. Si cerró el Login sin entrar, matamos el proceso
-                Application.Exit();
-            }
+            // Si el login falló o se canceló, la aplicación termina naturalmente
         }
     }
 }

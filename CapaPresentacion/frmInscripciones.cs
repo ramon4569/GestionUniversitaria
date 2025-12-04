@@ -370,5 +370,10 @@ namespace CapaPresentacion
                 MessageBox.Show("Error al dar de baja: " + ex.Message, "Error Crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void txtCarrera_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
