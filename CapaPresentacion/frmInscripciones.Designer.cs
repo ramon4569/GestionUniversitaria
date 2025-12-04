@@ -55,8 +55,8 @@
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             dgvMateriasInscritas = new Guna.UI2.WinForms.Guna2DataGridView();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvMateriasInscritas).BeginInit();
             guna2Panel1.SuspendLayout();
@@ -91,7 +91,7 @@
             dtpFecha.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dtpFecha.Name = "dtpFecha";
             dtpFecha.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            dtpFecha.Size = new Size(200, 36);
+            dtpFecha.Size = new Size(264, 115);
             dtpFecha.TabIndex = 6;
             dtpFecha.Value = new DateTime(2025, 11, 29, 13, 56, 40, 996);
             // 
@@ -112,7 +112,7 @@
             txtCreditos.ReadOnly = true;
             txtCreditos.SelectedText = "";
             txtCreditos.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            txtCreditos.Size = new Size(200, 37);
+            txtCreditos.Size = new Size(264, 37);
             txtCreditos.TabIndex = 5;
             // 
             // cmbMaterias
@@ -130,7 +130,7 @@
             cmbMaterias.Location = new Point(60, 265);
             cmbMaterias.Name = "cmbMaterias";
             cmbMaterias.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            cmbMaterias.Size = new Size(200, 36);
+            cmbMaterias.Size = new Size(264, 36);
             cmbMaterias.TabIndex = 4;
             // 
             // guna2HtmlLabel2
@@ -160,7 +160,7 @@
             txtCarrera.ReadOnly = true;
             txtCarrera.SelectedText = "";
             txtCarrera.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            txtCarrera.Size = new Size(200, 36);
+            txtCarrera.Size = new Size(264, 36);
             txtCarrera.TabIndex = 2;
             // 
             // cmbEstudiantes
@@ -178,7 +178,7 @@
             cmbEstudiantes.Location = new Point(60, 94);
             cmbEstudiantes.Name = "cmbEstudiantes";
             cmbEstudiantes.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            cmbEstudiantes.Size = new Size(200, 36);
+            cmbEstudiantes.Size = new Size(264, 36);
             cmbEstudiantes.TabIndex = 1;
             // 
             // guna2HtmlLabel1
@@ -253,16 +253,6 @@
             guna2Panel1.Size = new Size(753, 639);
             guna2Panel1.TabIndex = 0;
             // 
-            // guna2HtmlLabel3
-            // 
-            guna2HtmlLabel3.BackColor = Color.Transparent;
-            guna2HtmlLabel3.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
-            guna2HtmlLabel3.Location = new Point(61, 46);
-            guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            guna2HtmlLabel3.Size = new Size(390, 32);
-            guna2HtmlLabel3.TabIndex = 7;
-            guna2HtmlLabel3.Text = "MATERIAS CURSANDO ACTUALMENTE";
-            // 
             // guna2HtmlLabel4
             // 
             guna2HtmlLabel4.BackColor = Color.Transparent;
@@ -272,6 +262,16 @@
             guna2HtmlLabel4.Size = new Size(249, 32);
             guna2HtmlLabel4.TabIndex = 7;
             guna2HtmlLabel4.Text = "MATERIAS DISPONIBLES";
+            // 
+            // guna2HtmlLabel3
+            // 
+            guna2HtmlLabel3.BackColor = Color.Transparent;
+            guna2HtmlLabel3.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
+            guna2HtmlLabel3.Location = new Point(61, 46);
+            guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            guna2HtmlLabel3.Size = new Size(390, 32);
+            guna2HtmlLabel3.TabIndex = 7;
+            guna2HtmlLabel3.Text = "MATERIAS CURSANDO ACTUALMENTE";
             // 
             // frmInscripciones
             // 
