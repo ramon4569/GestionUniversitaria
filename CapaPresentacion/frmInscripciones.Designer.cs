@@ -91,7 +91,7 @@
             dtpFecha.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dtpFecha.Name = "dtpFecha";
             dtpFecha.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            dtpFecha.Size = new Size(264, 115);
+            dtpFecha.Size = new Size(264, 51);
             dtpFecha.TabIndex = 6;
             dtpFecha.Value = new DateTime(2025, 11, 29, 13, 56, 40, 996);
             // 
