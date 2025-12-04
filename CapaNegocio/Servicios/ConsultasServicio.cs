@@ -41,17 +41,23 @@ namespace CapaNegocio.Servicios
         {
             List<Estudiante> lista = _estudianteDAL.ObtenerTodosCompletos();
 
-            if (string.IsNullOrEmpty(texto)) return ObtenerListadoGeneral();
+            if (string.IsNullOrEmpty(texto))
+            {
+                // Asegúrate que ObtenerListadoGeneral() no devuelve null si la lista está vacía
+                return ObtenerListadoGeneral();
+            }
 
-            // Aplicación de Where() para el filtro
+            // Aplicación de Where() para el filtro (CORREGIDO)
             return lista
-                .Where(e => e.Nombre.ToLower().Contains(texto.ToLower()) ||
-                            e.Apellido.ToLower().Contains(texto.ToLower()) ||
-                            e.Matricula.Contains(texto))
+                .Where(e => (e.Nombre ?? "").ToLower().Contains(texto.ToLower()) || // ⬅️ CORRECCIÓN: Usa ?? ""
+                             (e.Apellido ?? "").ToLower().Contains(texto.ToLower()) || // ⬅️ CORRECCIÓN: Usa ?? ""
+                             (e.Matricula ?? "").Contains(texto)) // ⬅️ CORRECCIÓN: Si Matricula puede ser null
                 .Select(e => new
                 {
                     Matricula = e.Matricula,
-                    Nombre = $"{e.Nombre} {e.Apellido}",
+                    // Por robustez, también verifica nulls al concatenar.
+                    // Si son null, se usa "" para evitar "null Apellido"
+                    Nombre = $"{(e.Nombre ?? "")} {(e.Apellido ?? "")}",
                     Carrera = e.Carrera,
                     Indice = e.IndiceAcademico
                 }).ToList();

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -79,10 +78,6 @@
             dgvEstudiantes = new Guna.UI2.WinForms.Guna2DataGridView();
             txtBuscar = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
-            guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(components);
-            guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(components);
-            guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(components);
             panelRegistro.SuspendLayout();
             guna2GroupBox2.SuspendLayout();
             panelListado.SuspendLayout();
@@ -155,10 +150,10 @@
             btnNuevo.Font = new Font("Segoe UI", 9F);
             btnNuevo.ForeColor = Color.White;
             btnNuevo.HoverState.FillColor = Color.FromArgb(70, 120, 60);
-            btnNuevo.Location = new Point(173, 220);
+            btnNuevo.Location = new Point(261, 205);
             btnNuevo.Name = "btnNuevo";
             btnNuevo.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnNuevo.Size = new Size(104, 45);
+            btnNuevo.Size = new Size(183, 64);
             btnNuevo.TabIndex = 21;
             btnNuevo.Text = "Nuevo";
             btnNuevo.Click += btnNuevo_Click_2;
@@ -175,10 +170,10 @@
             btnGuardar.Font = new Font("Segoe UI", 9F);
             btnGuardar.ForeColor = Color.White;
             btnGuardar.HoverState.FillColor = Color.FromArgb(70, 120, 60);
-            btnGuardar.Location = new Point(173, 145);
+            btnGuardar.Location = new Point(261, 122);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnGuardar.Size = new Size(104, 45);
+            btnGuardar.Size = new Size(183, 67);
             btnGuardar.TabIndex = 20;
             btnGuardar.Text = "Guardar";
             btnGuardar.Click += btnGuardar_Click_2;
@@ -203,13 +198,13 @@
             txtTelefono.PlaceholderText = "";
             txtTelefono.SelectedText = "";
             txtTelefono.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            txtTelefono.Size = new Size(120, 30);
+            txtTelefono.Size = new Size(178, 29);
             txtTelefono.TabIndex = 14;
             // 
             // guna2HtmlLabel7
             // 
             guna2HtmlLabel7.BackColor = Color.Transparent;
-            guna2HtmlLabel7.Location = new Point(26, 396);
+            guna2HtmlLabel7.Location = new Point(21, 396);
             guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             guna2HtmlLabel7.Size = new Size(50, 17);
             guna2HtmlLabel7.TabIndex = 19;
@@ -232,13 +227,13 @@
             cmbCarrera.Location = new Point(18, 347);
             cmbCarrera.Name = "cmbCarrera";
             cmbCarrera.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            cmbCarrera.Size = new Size(140, 36);
+            cmbCarrera.Size = new Size(198, 36);
             cmbCarrera.TabIndex = 15;
             // 
             // guna2HtmlLabel6
             // 
             guna2HtmlLabel6.BackColor = Color.Transparent;
-            guna2HtmlLabel6.Location = new Point(18, 324);
+            guna2HtmlLabel6.Location = new Point(20, 324);
             guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             guna2HtmlLabel6.Size = new Size(41, 17);
             guna2HtmlLabel6.TabIndex = 18;
@@ -264,7 +259,7 @@
             txtApellido.PlaceholderText = "";
             txtApellido.SelectedText = "";
             txtApellido.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            txtApellido.Size = new Size(120, 30);
+            txtApellido.Size = new Size(178, 30);
             txtApellido.TabIndex = 17;
             // 
             // guna2HtmlLabel5
@@ -314,7 +309,7 @@
             txtEmail.PlaceholderText = "";
             txtEmail.SelectedText = "";
             txtEmail.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            txtEmail.Size = new Size(120, 30);
+            txtEmail.Size = new Size(178, 30);
             txtEmail.TabIndex = 16;
             // 
             // guna2HtmlLabel2
@@ -346,7 +341,7 @@
             txtMatricula.PlaceholderText = "";
             txtMatricula.SelectedText = "";
             txtMatricula.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            txtMatricula.Size = new Size(120, 30);
+            txtMatricula.Size = new Size(178, 26);
             txtMatricula.TabIndex = 12;
             // 
             // txtNombre
@@ -369,7 +364,7 @@
             txtNombre.PlaceholderText = "";
             txtNombre.SelectedText = "";
             txtNombre.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            txtNombre.Size = new Size(120, 30);
+            txtNombre.Size = new Size(178, 28);
             txtNombre.TabIndex = 13;
             // 
             // panelListado
@@ -479,7 +474,7 @@
             txtBuscar.PlaceholderText = "";
             txtBuscar.SelectedText = "";
             txtBuscar.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            txtBuscar.Size = new Size(200, 36);
+            txtBuscar.Size = new Size(446, 36);
             txtBuscar.TabIndex = 1;
             txtBuscar.TextChanged += txtBuscar_TextChanged_2;
             // 
@@ -491,25 +486,6 @@
             guna2HtmlLabel1.Size = new Size(38, 17);
             guna2HtmlLabel1.TabIndex = 0;
             guna2HtmlLabel1.Text = "Buscar";
-            // 
-            // guna2Elipse1
-            // 
-            guna2Elipse1.BorderRadius = 8;
-            guna2Elipse1.TargetControl = panelListado;
-            // 
-            // guna2ShadowForm1
-            // 
-            guna2ShadowForm1.BorderRadius = 20;
-            guna2ShadowForm1.TargetForm = this;
-            // 
-            // guna2AnimateWindow1
-            // 
-            guna2AnimateWindow1.TargetForm = this;
-            // 
-            // guna2DragControl1
-            // 
-            guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
-            guna2DragControl1.UseTransparentDrag = true;
             // 
             // frmEstudiantes
             // 
@@ -538,10 +514,6 @@
 
         private Label label1;
         private Panel panelRegistro;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
-        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
-        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2Panel panelListado;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private Guna.UI2.WinForms.Guna2TextBox txtBuscar;

@@ -364,6 +364,7 @@
             // 
             dataGridViewCellStyle1.BackColor = Color.White;
             gunaDgvConsultas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            gunaDgvConsultas.AutoGenerateColumns = true; // ⬅️ ✅ CORRECCIÓN PRINCIPAL
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -384,7 +385,10 @@
             gunaDgvConsultas.GridColor = Color.FromArgb(231, 229, 255);
             gunaDgvConsultas.Location = new Point(18, 137);
             gunaDgvConsultas.Name = "gunaDgvConsultas";
+            gunaDgvConsultas.ReadOnly = true; // ⬅️ ✅ AGREGADO
+            gunaDgvConsultas.AllowUserToAddRows = false; // ⬅️ ✅ AGREGADO
             gunaDgvConsultas.RowHeadersVisible = false;
+            gunaDgvConsultas.SelectionMode = DataGridViewSelectionMode.FullRowSelect; // ⬅️ ✅ AGREGADO
             gunaDgvConsultas.Size = new Size(1052, 359);
             gunaDgvConsultas.TabIndex = 10;
             gunaDgvConsultas.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
@@ -400,7 +404,7 @@
             gunaDgvConsultas.ThemeStyle.HeaderStyle.ForeColor = Color.White;
             gunaDgvConsultas.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             gunaDgvConsultas.ThemeStyle.HeaderStyle.Height = 4;
-            gunaDgvConsultas.ThemeStyle.ReadOnly = false;
+            gunaDgvConsultas.ThemeStyle.ReadOnly = true; // ⬅️ ✅ AGREGADO
             gunaDgvConsultas.ThemeStyle.RowsStyle.BackColor = Color.White;
             gunaDgvConsultas.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             gunaDgvConsultas.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
