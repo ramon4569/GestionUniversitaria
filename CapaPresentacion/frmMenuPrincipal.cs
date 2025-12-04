@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -172,6 +173,19 @@ namespace CapaPresentacion
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             AbrirFormularioHijo(new frmInscripciones());
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        // Código del Control que INICIA el arrastre (ej. un botón o PictureBox)
+     
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            
         }
     }
 }

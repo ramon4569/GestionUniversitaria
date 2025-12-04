@@ -103,12 +103,12 @@ namespace CapaPresentacion
             string contrasena = txtPass.Text;
 
             // 2. Validar vacíos
-            if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(contrasena))
+            if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(contrasena) || usuario == "USUARIO" || contrasena == "CONTRASEÑA")
             {
                 // Asegúrate de tener este Label en el diseño o usa MessageBox
                 if (lblError != null)
                 {
-                    lblError.Text = "Ingrese usuario y contraseña.";
+                    lblError.Text = "Ingrese usuario y contraseña válidos.";
                     lblError.Visible = true;
                 }
                 else
@@ -123,9 +123,17 @@ namespace CapaPresentacion
                 // 3. Llamar al servicio
                 Usuario usuarioLogueado = _authService.ValidarAcceso(usuario, contrasena);
 
-                // 4. Éxito
+                // 4. Éxito: Ocultar Login, Mostrar Barra de Carga, luego cerrar Login
                 MessageBox.Show($"Bienvenido {usuarioLogueado.NombreCompleto}", "Sistema Académico");
 
+                // Ocultar el formulario de Login (NO cerrar)
+                this.Hide();
+
+                // Mostrar la barra de carga. La ejecución se detiene aquí hasta que frmBarra se cierra.
+                frmBarra barra = new frmBarra();
+                barra.ShowDialog();
+
+                // Una vez que la barra se cierra y el menú se abre, cerramos el Login.
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
@@ -134,6 +142,7 @@ namespace CapaPresentacion
                 // 5. Error
                 if (lblError != null)
                 {
+                    // Muestra el mensaje de error que viene de tu servicio (¡La clave!)
                     lblError.Text = ex.Message;
                     lblError.Visible = true;
                 }

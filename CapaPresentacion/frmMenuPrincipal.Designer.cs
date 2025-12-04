@@ -55,11 +55,8 @@
             panelLogo = new Panel();
             pictureBox1 = new PictureBox();
             SidebarTimer = new System.Windows.Forms.Timer(components);
-            guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
-            guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(components);
-            guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(components);
-            guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(components);
             panelContenedor = new Panel();
+            pictureBox2 = new PictureBox();
             panel1 = new Panel();
             guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             btnCerrar = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -68,6 +65,7 @@
             panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelContenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -101,8 +99,9 @@
             guna2Button1.FillColor = Color.FromArgb(28, 28, 28);
             guna2Button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2Button1.ForeColor = Color.White;
+            guna2Button1.Image = Properties.Resources.Incripcionn;
             guna2Button1.ImageAlign = HorizontalAlignment.Left;
-            guna2Button1.ImageSize = new Size(50, 50);
+            guna2Button1.ImageSize = new Size(55, 55);
             guna2Button1.Location = new Point(0, 386);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
@@ -116,7 +115,7 @@
             btnMenu.CustomizableEdges = customizableEdges3;
             btnMenu.Image = Properties.Resources.image__8_1;
             btnMenu.ImageRotate = 0F;
-            btnMenu.Location = new Point(3, 91);
+            btnMenu.Location = new Point(9, 94);
             btnMenu.Name = "btnMenu";
             btnMenu.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnMenu.Size = new Size(50, 50);
@@ -136,11 +135,12 @@
             btnSalir.FillColor = Color.FromArgb(28, 28, 28);
             btnSalir.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSalir.ForeColor = Color.White;
-            btnSalir.Image = Properties.Resources.energia;
+            btnSalir.Image = Properties.Resources.Off;
             btnSalir.ImageAlign = HorizontalAlignment.Left;
-            btnSalir.ImageSize = new Size(50, 50);
-            btnSalir.Location = new Point(3, 470);
+            btnSalir.ImageSize = new Size(55, 55);
+            btnSalir.Location = new Point(0, 470);
             btnSalir.Name = "btnSalir";
+            btnSalir.PressedColor = Color.FromArgb(28, 28, 28);
             btnSalir.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnSalir.Size = new Size(250, 78);
             btnSalir.TabIndex = 8;
@@ -224,10 +224,11 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Dock = DockStyle.Fill;
-            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Image = Properties.Resources.Gemini_Generated_Image_jkw9qpjkw9qpjkw9;
+            pictureBox1.Location = new Point(-49, -67);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(70, 100);
+            pictureBox1.Size = new Size(166, 231);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
@@ -236,28 +237,10 @@
             SidebarTimer.Interval = 15;
             SidebarTimer.Tick += SidebarTimer_Tick;
             // 
-            // guna2Elipse1
-            // 
-            guna2Elipse1.BorderRadius = 8;
-            guna2Elipse1.TargetControl = this;
-            // 
-            // guna2ShadowForm1
-            // 
-            guna2ShadowForm1.TargetForm = this;
-            // 
-            // guna2AnimateWindow1
-            // 
-            guna2AnimateWindow1.TargetForm = this;
-            // 
-            // guna2DragControl1
-            // 
-            guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
-            guna2DragControl1.TargetControl = panelContenedor;
-            guna2DragControl1.UseTransparentDrag = true;
-            // 
             // panelContenedor
             // 
-            panelContenedor.BackColor = Color.White;
+            panelContenedor.BackColor = Color.FromArgb(1, 1, 1);
+            panelContenedor.Controls.Add(pictureBox2);
             panelContenedor.Controls.Add(panel1);
             panelContenedor.Dock = DockStyle.Fill;
             panelContenedor.Location = new Point(70, 0);
@@ -265,6 +248,17 @@
             panelContenedor.Size = new Size(1346, 678);
             panelContenedor.TabIndex = 1;
             panelContenedor.Paint += panelContenedor_Paint;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.Logo;
+            pictureBox2.Location = new Point(380, 94);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(621, 521);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 1;
+            pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click_1;
             // 
             // panel1
             // 
@@ -276,6 +270,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1346, 17);
             panel1.TabIndex = 0;
+            panel1.MouseDown += panel1_MouseDown;
             // 
             // guna2ControlBox2
             // 
@@ -283,7 +278,7 @@
             guna2ControlBox2.BackColor = Color.Black;
             guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             guna2ControlBox2.CustomizableEdges = customizableEdges13;
-            guna2ControlBox2.FillColor = Color.FromArgb(212, 210, 195);
+            guna2ControlBox2.FillColor = Color.FromArgb(15, 15, 15);
             guna2ControlBox2.IconColor = Color.DimGray;
             guna2ControlBox2.Location = new Point(1294, 0);
             guna2ControlBox2.Name = "guna2ControlBox2";
@@ -295,7 +290,7 @@
             // 
             btnCerrar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnCerrar.CustomizableEdges = customizableEdges15;
-            btnCerrar.FillColor = Color.FromArgb(212, 210, 195);
+            btnCerrar.FillColor = Color.FromArgb(15, 15, 15);
             btnCerrar.IconColor = Color.DimGray;
             btnCerrar.Location = new Point(1323, 0);
             btnCerrar.Name = "btnCerrar";
@@ -320,6 +315,7 @@
             panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panelContenedor.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -330,10 +326,6 @@
         private Panel panelLogo;
         private PictureBox pictureBox1;
         private System.Windows.Forms.Timer SidebarTimer;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
-        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
-        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2Button btnSalir;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button btnConsultas;
@@ -344,5 +336,6 @@
         private Panel panel1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox btnCerrar;
+        private PictureBox pictureBox2;
     }
 }

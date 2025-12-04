@@ -40,15 +40,20 @@ namespace CapaPresentacion
 
         private void FrmConsultas_Load(object sender, EventArgs e)
         {
-            // Al abrir, cargamos la lista general
+            // ========== CONFIGURACIÓN DEL DATAGRIDVIEW ==========
+            // IMPORTANTE: Establecer AutoGenerateColumns ANTES de cargar datos
+            gunaDgvConsultas.AutoGenerateColumns = true;
+            gunaDgvConsultas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            gunaDgvConsultas.AllowUserToAddRows = false;
+            gunaDgvConsultas.ReadOnly = true;
+            gunaDgvConsultas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            // ========== CARGAR DATOS INICIALES ==========
             CargarGrid(_servicio.ObtenerListadoGeneral());
 
-            // Configuraciones visuales del Grid (Opcional si ya lo hiciste en diseño)
-            gunaDgvConsultas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-            // 3. LLENAR COMBOBOX CON CARRERAS DE LA UCE
+            // ========== CONFIGURAR COMBOBOX DE CARRERAS ==========
             gunaCmbCarreras.Items.Clear();
-            gunaCmbCarreras.Items.Add("Todas"); // Opción para resetear
+            gunaCmbCarreras.Items.Add("Todas");
 
             // Facultad de Ciencias de la Salud
             gunaCmbCarreras.Items.Add("Medicina");
@@ -58,7 +63,7 @@ namespace CapaPresentacion
             gunaCmbCarreras.Items.Add("Farmacia");
 
             // Facultad de Ingenierías y Sistemas
-            gunaCmbCarreras.Items.Add("Ingeniería de Sistemas"); // O Software
+            gunaCmbCarreras.Items.Add("Ingeniería de Sistemas");
             gunaCmbCarreras.Items.Add("Ingeniería Civil");
             gunaCmbCarreras.Items.Add("Ingeniería Industrial");
             gunaCmbCarreras.Items.Add("Ingeniería Electromecánica");
@@ -80,21 +85,61 @@ namespace CapaPresentacion
             gunaCmbCarreras.Items.Add("Psicología");
             gunaCmbCarreras.Items.Add("Educación");
 
-            // Seleccionar "Todas" por defecto
             gunaCmbCarreras.SelectedIndex = 0;
         }
 
 
+      
         private void CargarGrid(object datos)
         {
-            gunaDgvConsultas.DataSource = null; // Limpiamos
-            gunaDgvConsultas.DataSource = datos; // Asignamos la nueva data
+            try
+            {
+                gunaDgvConsultas.SuspendLayout();
+                gunaDgvConsultas.DataSource = null;
+                gunaDgvConsultas.Columns.Clear();
+                gunaDgvConsultas.DataSource = datos;
 
-            // Actualizamos el contador de abajo
-            int cantidad = gunaDgvConsultas.Rows.Count;
-            if (lblTotalResultados != null)
-                lblTotalResultados.Text = $"Total Registros: {cantidad}";
+                // Ocultar columnas individuales si existen
+                if (gunaDgvConsultas.Columns.Contains("Nombre"))
+                    gunaDgvConsultas.Columns["Nombre"].Visible = false;
+
+                if (gunaDgvConsultas.Columns.Contains("Apellido"))
+                    gunaDgvConsultas.Columns["Apellido"].Visible = false;
+
+                // Agregar columna calculada
+                if (gunaDgvConsultas.Columns.Contains("Nombre") &&
+                    gunaDgvConsultas.Columns.Contains("Apellido"))
+                {
+                    DataGridViewTextBoxColumn colNombreCompleto = new DataGridViewTextBoxColumn
+                    {
+                        Name = "NombreCompleto",
+                        HeaderText = "Nombre Completo",
+                        MinimumWidth = 200,
+                        DisplayIndex = 1 // Posición después de Matrícula
+                    };
+                    gunaDgvConsultas.Columns.Add(colNombreCompleto);
+
+                    // Llenar la columna con datos
+                    foreach (DataGridViewRow row in gunaDgvConsultas.Rows)
+                    {
+                        if (row.Cells["Nombre"].Value != null &&
+                            row.Cells["Apellido"].Value != null)
+                        {
+                            row.Cells["NombreCompleto"].Value =
+                                $"{row.Cells["Nombre"].Value} {row.Cells["Apellido"].Value}";
+                        }
+                    }
+                }
+
+                // Resto del código...
+                gunaDgvConsultas.ResumeLayout();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar datos: {ex.Message}");
+            }
         }
+
 
         private void btnRiesgo_Click(object sender, EventArgs e)
         {

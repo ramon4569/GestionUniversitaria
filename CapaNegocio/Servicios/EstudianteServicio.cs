@@ -62,5 +62,7 @@ namespace CapaNegocio.Servicios
                                     (e.Apellido != null && e.Apellido.ToLower().Contains(texto.ToLower())) ||
                                     (e.Matricula != null && e.Matricula.Contains(texto))).ToList();
         }
+
+
     }
 }
