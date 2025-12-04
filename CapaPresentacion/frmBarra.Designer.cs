@@ -86,7 +86,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(27, 37, 49);
+            BackColor = Color.FromArgb(28, 28, 28);
             ClientSize = new Size(726, 235);
             Controls.Add(progressBar1);
             Controls.Add(label3);

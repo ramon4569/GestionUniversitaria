@@ -134,7 +134,7 @@
             guna2GroupBox2.Location = new Point(0, 0);
             guna2GroupBox2.Name = "guna2GroupBox2";
             guna2GroupBox2.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            guna2GroupBox2.Size = new Size(489, 678);
+            guna2GroupBox2.Size = new Size(349, 678);
             guna2GroupBox2.TabIndex = 4;
             guna2GroupBox2.Text = "REGISTRO ESTUDIANTES";
             // 
@@ -150,7 +150,7 @@
             btnNuevo.Font = new Font("Segoe UI", 9F);
             btnNuevo.ForeColor = Color.White;
             btnNuevo.HoverState.FillColor = Color.FromArgb(70, 120, 60);
-            btnNuevo.Location = new Point(261, 205);
+            btnNuevo.Location = new Point(19, 484);
             btnNuevo.Name = "btnNuevo";
             btnNuevo.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnNuevo.Size = new Size(183, 64);
@@ -170,7 +170,7 @@
             btnGuardar.Font = new Font("Segoe UI", 9F);
             btnGuardar.ForeColor = Color.White;
             btnGuardar.HoverState.FillColor = Color.FromArgb(70, 120, 60);
-            btnGuardar.Location = new Point(261, 122);
+            btnGuardar.Location = new Point(21, 570);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnGuardar.Size = new Size(183, 67);
@@ -372,10 +372,10 @@
             panelListado.Controls.Add(guna2GroupBox1);
             panelListado.CustomizableEdges = customizableEdges23;
             panelListado.Dock = DockStyle.Right;
-            panelListado.Location = new Point(489, 0);
+            panelListado.Location = new Point(349, 0);
             panelListado.Name = "panelListado";
             panelListado.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            panelListado.Size = new Size(677, 678);
+            panelListado.Size = new Size(817, 678);
             panelListado.TabIndex = 3;
             // 
             // guna2GroupBox1
@@ -390,7 +390,7 @@
             guna2GroupBox1.Location = new Point(0, 0);
             guna2GroupBox1.Name = "guna2GroupBox1";
             guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            guna2GroupBox1.Size = new Size(677, 678);
+            guna2GroupBox1.Size = new Size(817, 678);
             guna2GroupBox1.TabIndex = 0;
             guna2GroupBox1.Text = "BUSQUEDA ESTUDIANTES";
             guna2GroupBox1.Click += guna2GroupBox1_Click;
@@ -434,7 +434,7 @@
             dgvEstudiantes.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvEstudiantes.RowHeadersVisible = false;
             dgvEstudiantes.RowTemplate.Height = 40;
-            dgvEstudiantes.Size = new Size(589, 345);
+            dgvEstudiantes.Size = new Size(736, 431);
             dgvEstudiantes.TabIndex = 8;
             dgvEstudiantes.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvEstudiantes.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -474,7 +474,7 @@
             txtBuscar.PlaceholderText = "";
             txtBuscar.SelectedText = "";
             txtBuscar.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            txtBuscar.Size = new Size(446, 36);
+            txtBuscar.Size = new Size(736, 36);
             txtBuscar.TabIndex = 1;
             txtBuscar.TextChanged += txtBuscar_TextChanged_2;
             // 

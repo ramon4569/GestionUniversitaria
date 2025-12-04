@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CapaPresentacion
@@ -19,12 +12,10 @@ namespace CapaPresentacion
 
         private void label3_Click(object sender, EventArgs e)
         {
-
         }
 
         private void progressBar1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void frmBarra_Load(object sender, EventArgs e)
@@ -43,13 +34,14 @@ namespace CapaPresentacion
             {
                 timer1.Stop();
 
-                // 1. Instanciar y mostrar el menú principal (frmMenuPrincipal)
+                // Instanciar y mostrar el menú principal
                 frmMenuPrincipal menuPrincipal = new frmMenuPrincipal();
                 menuPrincipal.Show();
 
-                // 2. Cerrar la barra de carga
-                this.Close(); // <-- Usar Close() para cerrar la barra.
-            }
+                // Cerrar la barra de carga
+                // IMPORTANTE: Usar Close() en lugar de Hide()
+                this.Close();
+            }
         }
     }
 }

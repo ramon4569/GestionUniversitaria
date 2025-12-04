@@ -162,6 +162,7 @@
             txtCarrera.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txtCarrera.Size = new Size(264, 36);
             txtCarrera.TabIndex = 2;
+            txtCarrera.TextChanged += txtCarrera_TextChanged;
             // 
             // cmbEstudiantes
             // 
